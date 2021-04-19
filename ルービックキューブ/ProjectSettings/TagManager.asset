@@ -7,6 +7,8 @@ TagManager:
   - Center
   - Sub
   - Corner
+  - Target geme object
+  - TargetGameObject
   layers:
   - Default
   - TransparentFX
