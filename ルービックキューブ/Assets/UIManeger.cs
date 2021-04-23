@@ -15,14 +15,14 @@ public class UIManeger : MonoBehaviour
         helpPanel.SetActive(false);
     }
 
-    //GamePanel‚ÅHelpBotton‚ª‰Ÿ‚³‚ê‚½‚Ìˆ—
+    //GamePanel‚ÅHelpButton‚ª‰Ÿ‚³‚ê‚½‚Ìˆ—
     public void SelectGameDescription()
     {
         gamePanel.SetActive(false);
         helpPanel.SetActive(true);
     }
 
-    //HelpPanel‚ÅReturnBotton‚ª‰Ÿ‚³‚ê‚½‚Ìˆ—
+    //HelpPanel‚ÅReturnButton‚ª‰Ÿ‚³‚ê‚½‚Ìˆ—
     public void SelectHelpDescription()
     {
         helpPanel.SetActive(false);
