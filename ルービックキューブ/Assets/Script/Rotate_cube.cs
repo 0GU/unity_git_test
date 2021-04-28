@@ -70,7 +70,7 @@ public class Rotate_cube : MonoBehaviour
                    _axis,
                    360 / _period * Time.deltaTime);
                     await Task.Delay(1);
-                } while (transform.localEulerAngles.x > 359 || transform.localEulerAngles.x < 90);
+                } while (transform.localEulerAngles.x > 360 || transform.localEulerAngles.x < 9);
                 num_x += 1;
                 break;
             case 2:
@@ -111,71 +111,171 @@ public class Rotate_cube : MonoBehaviour
         if (num_x == 4)
             num_x = 0;
 
+
+        switch (y)
+        {
+            case 0:
+                switch (z)
+                {
+                    case 0:
+                        y = 2;
+                        break;
+                    case 1:
+                        z = 0;
+                        y = 1;
+                        break;
+                    case 2:
+                        z = 0;
+                        break;
+                }
+                break;
+            case 1:
+                switch (z)
+                {
+                    case 0:
+                        z = 1;
+                        y = 2;
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        z = 1;
+                        y = 0;
+                        break;
+                }
+                break;
+            case 2:
+                switch (z)
+                {
+                    case 0:
+                        z = 2;
+                        break;
+                    case 1:
+                        z = 2;
+                        y = 1;
+                        break;
+                    case 2:
+                        y = 0;
+                        break;
+                }
+                break;
+        }
+
         Stop.cubeflag[flag_num] = false;
 
     }
 
-    //public async void degree_rotationXR(Vector3 A, int flag_num)
-    //{
-    //    _center = new Vector3(1, 1, 1.5f);
+    public async void degree_rotationXR(Vector3 A, int flag_num)
+    {
+        _center = new Vector3(1, 1, 1.5f);
 
-    //    _axis = A;
+        _axis = A;
 
-    //    //’†S“_center‚ÌŽü‚è‚ðAŽ²axis‚ÅAperiodŽüŠú‚Å‰~‰^“®
-    //    switch (num_x)
-    //    {
-    //        case 1:
-    //            do
-    //            {
-    //                transform.RotateAround(
-    //               _center,
-    //               _axis,
-    //               360 / _period * Time.deltaTime);
-    //                await Task.Delay(1);
-    //            } while (transform.localEulerAngles.x > 359 || transform.localEulerAngles.x < 90);
-    //            num_x -= 1;
-    //            break;
-    //        case 2:
-    //            do
-    //            {
-    //                transform.RotateAround(
-    //               _center,
-    //               _axis,
-    //               360 / _period * Time.deltaTime);
-    //                await Task.Delay(1);
-    //            } while (transform.localEulerAngles.x > 271);
-    //            num_x -= 1;
-    //            break;
-    //        case 3:
-    //            do
-    //            {
-    //                transform.RotateAround(
-    //               _center,
-    //               _axis,
-    //               360 / _period * Time.deltaTime);
-    //                await Task.Delay(1);
-    //            } while (transform.localEulerAngles.x > 1);
-    //            num_x -= 1;
-    //            break;
-    //        case 0:
-    //            do
-    //            {
-    //                transform.RotateAround(
-    //               _center,
-    //               _axis,
-    //               360 / _period * Time.deltaTime);
-    //                await Task.Delay(1);
-    //            } while (transform.localEulerAngles.x < 89);
-    //            num_x -= 1;
-    //            break;
+        //’†S“_center‚ÌŽü‚è‚ðAŽ²axis‚ÅAperiodŽüŠú‚Å‰~‰^“®
+        switch (num_x)
+        {
+            case 1:
+                do
+                {
+                    transform.RotateAround(
+                   _center,
+                   -_axis,
+                   360 / _period * Time.deltaTime);
+                    await Task.Delay(1);
+                } while (transform.localEulerAngles.x > 1);
+                num_x -= 1;
+                break;
+            case 2:
+                do
+                {
+                    transform.RotateAround(
+                   _center,
+                 -_axis,
+                   360 / _period * Time.deltaTime);
+                    await Task.Delay(1);
+                } while ( transform.localEulerAngles.x < 89);
+                num_x -= 1;
+                break;
+            case 3:
+                do
+                {
+                    transform.RotateAround(
+                   _center,
+                -_axis,
+                   360 / _period * Time.deltaTime);
+                    await Task.Delay(1);
+                } while (transform.localEulerAngles.x > 1);
+                num_x -= 1;
+                break;
+            case 0:
+                do
+                {
+                    transform.RotateAround(
+                   _center,
+                 -_axis,
+                   360 / _period * Time.deltaTime);
+                    await Task.Delay(1);
+                } while (transform.localEulerAngles.x > 271 || transform.localEulerAngles.x < 1);
+                num_x -= 1;
+                break;
 
-    //    }
-    //    if (num_x == 4)
-    //        num_x = 0;
+        }
 
-    //    Stop.cubeflag[flag_num] = false;
+        switch (y)
+        {
+            case 0:
+                switch (z)
+                {
+                    case 0:
+                        z = 2;
+                        break;
+                    case 1:
+                        y = 1;
+                        z = 2;
+                        break;
+                    case 2:
+                        y = 2;
+                        break;
+                }
+                break;
+            case 1:
+                switch (z)
+                {
+                    case 0:
+                        z = 1;
+                        y = 0;
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        z = 1;
+                        y = 2;
+                        break;
+                }
+                break;
+            case 2:
+                switch (z)
+                {
+                    case 0:
+                        y = 0;
+                        break;
+                    case 1:
+                        z = 0;
+                        y = 1;
+                        break;
+                    case 2:
+                        z = 0;
+                        break;
+                }
+                break;
+        }
 
-    //}
+        if (num_x == -1)
+            num_x = 3;
+
+        Stop.cubeflag[flag_num] = false;
+
+    }
 
     public async void degree_rotationY( Vector3 A, int flag_num)
     {
@@ -341,11 +441,11 @@ public class Rotate_cube : MonoBehaviour
                         x = 2;
                         break;
                     case 1:
-                        x = 1;
-                        z = 0;
+                        z = 1;
+                        x = 2;
                         break;
                     case 2:
-                        z = 0;
+                        z = 2;
                         break;
                 }
                 break;
@@ -353,14 +453,14 @@ public class Rotate_cube : MonoBehaviour
                 switch (x)
                 {
                     case 0:
-                        x = 2;
-                        z = 1;
+                        x = 1;
+                        z = 0;
                         break;
                     case 1:
                         break;
                     case 2:
-                        x = 0;
-                        z = 1;
+                        x = 1;
+                        z = 2;
                         break;
                 }
                 break;
@@ -368,14 +468,14 @@ public class Rotate_cube : MonoBehaviour
                 switch (x)
                 {
                     case 0:
-                        z = 2;
+                        z = 0;
                         break;
                     case 1:
-                        x = 1;
-                        z = 2;
+                        x = 0;
+                        z = 1;
                         break;
                     case 2:
-                        z = 0;
+                        x = 0;
                         break;
                 }
                 break;
@@ -554,11 +654,11 @@ public class Rotate_cube : MonoBehaviour
                         y = 2;
                         break;
                     case 1:
-                        y = 1;
-                        x = 0;
+                        y = 2;
+                        x = 1;
                         break;
                     case 2:
-                        x = 0;
+                        x = 2;
                         break;
                 }
                 break;
@@ -566,14 +666,14 @@ public class Rotate_cube : MonoBehaviour
                 switch (y)
                 {
                     case 0:
-                        y = 2;
-                        x = 1;
+                        y = 1;
+                        x = 0;
                         break;
                     case 1:
                         break;
                     case 2:
-                        y = 0;
-                        x = 1;
+                        y = 1;
+                        x = 2;
                         break;
                 }
                 break;
@@ -581,11 +681,11 @@ public class Rotate_cube : MonoBehaviour
                 switch (y)
                 {
                     case 0:
-                        x = 2;
+                        x = 0;
                         break;
                     case 1:
-                        y = 1;
-                        x = 2;
+                        y = 0;
+                        x = 1;
                         break;
                     case 2:
                         y = 0;

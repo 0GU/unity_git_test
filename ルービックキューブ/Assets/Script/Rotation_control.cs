@@ -25,6 +25,28 @@ public class Rotation_control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.Alpha1) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false)
+        {
+            tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
+
+            for (int i = 0; i < tag1_Objects.Length; i++)
+            {
+                Front = tag1_Objects[i].GetComponent<Rotate_cube>();
+                if (Front.x == 0)
+                {
+                    Axis = new Vector3(1, 0, 0);
+                    cubeflag[c_num] = true;
+
+                    Front.degree_rotationXR(Axis, c_num);
+                    c_num++;
+                }
+
+            }
+
+            c_num = 0;
+        }
+
         //‰E‰ñ“]
         if (Input.GetKeyDown(KeyCode.Alpha1) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false)
         {
@@ -226,13 +248,21 @@ public class Rotation_control : MonoBehaviour
                         Axis = new Vector3(0, 0, 1);
                         Front.degree_rotationZ(Axis, c_num);
                     }
-
+                    else if (Front.num_y == 1)
+                    {
+                        Axis = new Vector3(0, 0, 1);
+                        Front.degree_rotationXR(-Axis, c_num);
+                    }
                     else if (Front.num_y == 2)
                     {
                         Axis = new Vector3(0, 0, 1);
                         Front.degree_rotationZR(-Axis, c_num);
                     }
-
+                    else if (Front.num_y == 3)
+                    {
+                        Axis = new Vector3(0, 0, 1);
+                        Front.degree_rotationX(Axis, c_num);
+                    }
                     c_num++;
                 }
 
