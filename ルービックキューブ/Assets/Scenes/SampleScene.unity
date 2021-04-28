@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: f73395901d9108449a56a66e42453493, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -202,7 +202,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: 140}
+  m_AnchoredPosition: {x: 200, y: 60}
   m_SizeDelta: {x: 159.46, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &412164178
@@ -238,7 +238,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u30DE\u30A6\u30B9\u64CD\u4F5C\r\n\n\u5DE6\u30AF\u30EA\u30C3\u30AF:\r\n\u53F3\u30AF\u30EA\u30C3\u30AF:"
+  m_Text: "\u30B9\u30DA\u30FC\u30B9\u30AD\u30FC\uFF1A\u30D1\u30CD\u30EB\u56DE\u8EE2"
 --- !u!222 &412164179
 CanvasRenderer:
   m_ObjectHideFlags: 0
