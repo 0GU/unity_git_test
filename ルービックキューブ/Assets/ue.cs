@@ -14,11 +14,16 @@ public class ue : MonoBehaviour
     public Vector3 gravityScale;    //重力加速度
 
     const float dt = 1f / 60f;  //微小時間dtに相当する部分
+
+    bool zerogravity = false;
+    bool gravity = false;
+
     public void AddForce(Vector3 force)
     {
         //変更部分開始------------------------------------
         acceleration += force / mass;
     }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,11 +34,16 @@ public class ue : MonoBehaviour
     void Update()
     {
 
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Physics.gravity = new Vector3(0, 0, 0);
+        }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.G))
         {
             Physics.gravity = new Vector3(0, -9.8f, 0);
         }
+
         else if (Input.GetKeyDown(KeyCode.R))
         {
             Physics.gravity = new Vector3(100.8f, 0, 0);
