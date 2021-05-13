@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 5777440317672571329}
   m_Layer: 0
   m_Name: Quad2
-  m_TagString: Untagged
+  m_TagString: yellow panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 5767070804856131822}
   m_Layer: 0
   m_Name: Quad1
-  m_TagString: Untagged
+  m_TagString: green panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -662,7 +662,7 @@ GameObject:
   - component: {fileID: 4725921079648193832}
   m_Layer: 0
   m_Name: Quad4
-  m_TagString: Untagged
+  m_TagString: blue panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
