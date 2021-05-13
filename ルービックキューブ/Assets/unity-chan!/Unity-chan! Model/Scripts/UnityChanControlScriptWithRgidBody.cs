@@ -24,7 +24,7 @@ namespace UnityChan
 
 		// 以下キャラクターコントローラ用パラメタ
 		// 前進速度
-		public float forwardSpeed = 7.0f;
+		public float forwardSpeed = 2.0f;
 		// 後退速度
 		public float backwardSpeed = 2.0f;
 		// 旋回速度
@@ -90,24 +90,24 @@ namespace UnityChan
 				velocity *= backwardSpeed;	// 移動速度を掛ける
 			}
 		
-			if (Input.GetButtonDown ("Jump")) {	// スペースキーを入力したら
+			//if (Input.GetButtonDown ("Jump")) {	// スペースキーを入力したら
 
-				//アニメーションのステートがLocomotionの最中のみジャンプできる
-				if (currentBaseState.nameHash == locoState) {
-					//ステート遷移中でなかったらジャンプできる
-					if (!anim.IsInTransition (0)) {
-						rb.AddForce (Vector3.up * jumpPower, ForceMode.VelocityChange);
-						anim.SetBool ("Jump", true);		// Animatorにジャンプに切り替えるフラグを送る
-					}
-				}
-			}
+			//	//アニメーションのステートがLocomotionの最中のみジャンプできる
+			//	if (currentBaseState.nameHash == locoState) {
+			//		//ステート遷移中でなかったらジャンプできる
+			//		if (!anim.IsInTransition (0)) {
+			//			rb.AddForce (Vector3.up * jumpPower, ForceMode.VelocityChange);
+			//			anim.SetBool ("Jump", true);		// Animatorにジャンプに切り替えるフラグを送る
+			//		}
+			//	}
+			//}
 		
 
 			// 上下のキー入力でキャラクターを移動させる
-			transform.localPosition += velocity * Time.fixedDeltaTime;
+			transform.localPosition += velocity * Time.fixedDeltaTime*0.5f;
 
 			// 左右のキー入力でキャラクタをY軸で旋回させる
-			transform.Rotate (0, h * rotateSpeed, 0);	
+			transform.Rotate (0,h*rotateSpeed*2, 0);	
 	
 
 			// 以下、Animatorの各ステート中での処理

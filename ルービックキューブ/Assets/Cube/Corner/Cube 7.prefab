@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2143404913122753427}
   m_Layer: 0
   m_Name: Quad3
-  m_TagString: Untagged
+  m_TagString: Blue Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -349,10 +349,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6657447709336772134}
   - component: {fileID: 5708372387904036298}
-  - component: {fileID: -1437940230760965106}
+  - component: {fileID: 6514519336959472329}
   m_Layer: 0
   m_Name: Cube 7
-  m_TagString: Cube
+  m_TagString: Corner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -393,7 +393,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-1437940230760965106
+--- !u!114 &6514519336959472329
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -405,22 +405,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9683944906974fc4dae2e99f8e35defd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _center: {x: 0, y: 0, z: 0}
-  _axis: {x: 0, y: 1, z: 0}
+  _center: {x: 1, y: 1, z: 0}
+  _axis: {x: 0, y: 0, z: 1}
   _period: 2
-  Terget_Y: 0
-  Terget_Z: 0
-  pos: {x: 0, y: 0, z: 0}
-  x: 0
-  y: 0
+  Terget: 0
+  flag: 0
   z: 0
-  angles: {x: 0, y: 0, z: 0}
-  angle_x: 0
-  angle_y: 0
-  angle_z: 0
-  num_x: 0
-  num_y: 0
-  num_z: 0
 --- !u!1 &6657447709652758126
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,7 +539,7 @@ GameObject:
   - component: {fileID: 4545158391850724452}
   m_Layer: 0
   m_Name: Quad6
-  m_TagString: Untagged
+  m_TagString: Yellow Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -662,7 +652,7 @@ GameObject:
   - component: {fileID: 1136865144378355128}
   m_Layer: 0
   m_Name: Quad1
-  m_TagString: Untagged
+  m_TagString: Green Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
