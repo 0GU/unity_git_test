@@ -7,11 +7,7 @@ TagManager:
   - Center
   - Sub
   - Corner
-  - Target geme object
-  - TargetGameObject
-  - Blue Panel
-  - Green Panel
-  - Yellow Panel
+  - Cube
   layers:
   - Default
   - TransparentFX
