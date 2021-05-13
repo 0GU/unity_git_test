@@ -25,7 +25,7 @@ public class Rotation_control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //âEâÒì]
         if (Input.GetKeyDown(KeyCode.Alpha1) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false)
         {
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
@@ -47,7 +47,7 @@ public class Rotation_control : MonoBehaviour
             c_num = 0;
         }
 
-        //âEâÒì]
+        //ç∂âÒì]
         if (Input.GetKeyDown(KeyCode.Alpha1) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false)
         {
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
@@ -67,7 +67,28 @@ public class Rotation_control : MonoBehaviour
 
             c_num = 0;
         }
+        //âEâÒì]
+        if (Input.GetKeyDown(KeyCode.Alpha2) && (Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false)
+        {
+            tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
 
+            for (int i = 0; i < tag1_Objects.Length; i++)
+            {
+                Front = tag1_Objects[i].GetComponent<Rotate_cube>();
+                if (Front.x == 1)
+                {
+                    Axis = new Vector3(1, 0, 0);
+                    cubeflag[c_num] = true;
+                    Front.degree_rotationXR(Axis, c_num);
+                    c_num++;
+                }
+
+            }
+
+            c_num = 0;
+        }
+
+        //ç∂âÒì]
         if (Input.GetKeyDown(KeyCode.Alpha2) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false)
         {
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
@@ -88,6 +109,30 @@ public class Rotation_control : MonoBehaviour
             c_num = 0;
         }
 
+
+        //âEâÒì]
+        if (Input.GetKeyDown(KeyCode.Alpha3) && (Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false)
+        {
+            tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
+
+            for (int i = 0; i < tag1_Objects.Length; i++)
+            {
+                Front = tag1_Objects[i].GetComponent<Rotate_cube>();
+                if (Front.x == 2)
+                {
+                    Axis = new Vector3(1, 0, 0);
+                    cubeflag[c_num] = true;
+                    Front.degree_rotationXR(Axis, c_num);
+                    c_num++;
+                }
+
+            }
+
+            c_num = 0;
+        }
+
+
+        //ç∂âÒì]
         if (Input.GetKeyDown(KeyCode.Alpha3) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false)
         {
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
@@ -243,21 +288,34 @@ public class Rotation_control : MonoBehaviour
                 {
 
                     cubeflag[c_num] = true;
-                    if (Front.num_y == 0)
+                    if ((Front.num_y == 0&& Front.num_x==0)|| (Front.num_y == 2 && Front.num_x == 2))
                     {
                         Axis = new Vector3(0, 0, 1);
                         Front.degree_rotationZ(Axis, c_num);
                     }
+                    else if (Front.num_y == 2||Front.num_x==2)
+                    {
+                        Axis = new Vector3(0, 0, 1);
+                        Front.degree_rotationZT(Axis, c_num);
+                    }
+                    else if (Front.num_x == 1)
+                    {
+                        Axis = new Vector3(0, 0, 1);
+                        Front.degree_rotationZ(Axis, c_num);
+                    }
+
+                    else if (Front.num_x == 3)
+                    {
+                        Axis = new Vector3(0, 0, 1);
+                        Front.degree_rotationZT(-Axis, c_num);
+                    }
+
                     else if (Front.num_y == 1)
                     {
                         Axis = new Vector3(0, 0, 1);
                         Front.degree_rotationXR(-Axis, c_num);
                     }
-                    else if (Front.num_y == 2)
-                    {
-                        Axis = new Vector3(0, 0, 1);
-                        Front.degree_rotationZR(-Axis, c_num);
-                    }
+                
                     else if (Front.num_y == 3)
                     {
                         Axis = new Vector3(0, 0, 1);
