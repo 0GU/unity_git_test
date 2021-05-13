@@ -41,7 +41,7 @@ public class Rotate_cube : MonoBehaviour
         y = (int)pos.y;
         z = (int)pos.z;
 
-        
+
     }
 
     private void Update()
@@ -70,7 +70,7 @@ public class Rotate_cube : MonoBehaviour
                    _axis,
                    360 / _period * Time.deltaTime);
                     await Task.Delay(1);
-                } while (transform.localEulerAngles.x > 360 || transform.localEulerAngles.x < 9);
+                } while (transform.localEulerAngles.x > 360 || transform.localEulerAngles.x < 90);
                 num_x += 1;
                 break;
             case 2:
@@ -110,6 +110,17 @@ public class Rotate_cube : MonoBehaviour
         }
         if (num_x == 4)
             num_x = 0;
+        if (num_x == 0)
+        {
+            Terget_Y = 0;
+            Terget_Z = 0;
+        }
+
+        if (num_x == 2)
+        {
+            Terget_Y = 180;
+            Terget_Z = 180;
+        }
 
 
         switch (y)
@@ -193,7 +204,7 @@ public class Rotate_cube : MonoBehaviour
                  -_axis,
                    360 / _period * Time.deltaTime);
                     await Task.Delay(1);
-                } while ( transform.localEulerAngles.x < 89);
+                } while (transform.localEulerAngles.x < 89);
                 num_x -= 1;
                 break;
             case 3:
@@ -277,7 +288,7 @@ public class Rotate_cube : MonoBehaviour
 
     }
 
-    public async void degree_rotationY( Vector3 A, int flag_num)
+    public async void degree_rotationY(Vector3 A, int flag_num)
     {
         _center = new Vector3(1, 1, 1.5f);
 
@@ -286,6 +297,9 @@ public class Rotate_cube : MonoBehaviour
         Terget_Y += 90;
         if (Terget_Y == 360)
             Terget_Y = 0;
+
+        if (Terget_Y == 450)
+            Terget_Y = 90;
 
         //’†S“_center‚ÌŽü‚è‚ðAŽ²axis‚ÅAperiodŽüŠú‚Å‰~‰^“®
         switch (num_y)
@@ -392,10 +406,7 @@ public class Rotate_cube : MonoBehaviour
 
         if (Terget_Y == -90)
             Terget_Y = 270;
-        //if (num_y == 2)
-        //{
-        //    _axis.z *= -1;
-        //}
+
 
         //’†S“_center‚ÌŽü‚è‚ðAŽ²axis‚ÅAperiodŽüŠú‚Å‰~‰^“®
         switch (num_y)
@@ -485,7 +496,7 @@ public class Rotate_cube : MonoBehaviour
 
     }
 
-    public async void degree_rotationZ( Vector3 A, int flag_num)
+    public async void degree_rotationZ(Vector3 A, int flag_num)
     {
         _center = new Vector3(1, 1, 1);
 
@@ -591,7 +602,7 @@ public class Rotate_cube : MonoBehaviour
 
     }
 
-    public async void degree_rotationZR( Vector3 A, int flag_num)
+    public async void degree_rotationZR(Vector3 A, int flag_num)
     {
         _center = new Vector3(1, 1, 1); ;
 
@@ -621,16 +632,16 @@ public class Rotate_cube : MonoBehaviour
                    -_axis,
                    360 / _period * Time.deltaTime);
                     await Task.Delay(1);
-                } while (transform.localEulerAngles.z > 360|| transform.localEulerAngles.z < 90);
+                } while (transform.localEulerAngles.z > 360 || transform.localEulerAngles.z < 90);
                 num_z -= 1;
-                
+
                 break;
             default:
                 do
                 {
                     transform.RotateAround(
                    _center,
-                  - _axis,
+                  -_axis,
                    360 / _period * Time.deltaTime);
                     await Task.Delay(1);
                 } while (transform.eulerAngles.z > Terget_Z);
@@ -689,6 +700,114 @@ public class Rotate_cube : MonoBehaviour
                         break;
                     case 2:
                         y = 0;
+                        break;
+                }
+                break;
+        }
+        Stop.cubeflag[flag_num] = false;
+
+
+    }
+
+    public async void degree_rotationZT(Vector3 A, int flag_num)
+    {
+        _center = new Vector3(1, 1, 1);
+
+        _axis = A;
+
+
+        Terget_Z -= 90;
+
+        if (Terget_Z == 0)
+            Terget_Z = 360;
+
+
+        if (Terget_Z == -90)
+            Terget_Z = 270;
+        //if (num_y == 2)
+        //{
+        //    _axis.z *= -1;
+        //}
+
+        //’†S“_center‚ÌŽü‚è‚ðAŽ²axis‚ÅAperiodŽüŠú‚Å‰~‰^“®
+        switch (num_z)
+        {
+            case 1:
+                do
+                {
+                    transform.RotateAround(
+                   _center,
+                   _axis,
+                   360 / _period * Time.deltaTime);
+                    await Task.Delay(1);
+                } while (transform.localEulerAngles.z > 360 || transform.localEulerAngles.z < 90);
+                num_z += 1;
+
+                break;
+            default:
+                do
+                {
+                    transform.RotateAround(
+                   _center,
+                   _axis,
+                   360 / _period * Time.deltaTime);
+                    await Task.Delay(1);
+                } while (transform.eulerAngles.z > Terget_Z);
+                num_z += 1;
+
+                break;
+
+
+        }
+        if (num_z == 4)
+            num_z = 0;
+
+
+
+        switch (x)
+        {
+            case 0:
+                switch (y)
+                {
+                    case 0:
+                        x = 2;
+                        break;
+                    case 1:
+                        x = 1;
+                        y = 0;
+                        break;
+                    case 2:
+                        y = 0;
+                        break;
+                }
+                break;
+            case 1:
+                switch (y)
+                {
+                    case 0:
+                        x = 2;
+                        y = 1;
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        x = 0;
+                        y = 1;
+                        break;
+                }
+                break;
+            case 2:
+                switch (y)
+                {
+                    case 0:
+                        y = 2;
+                        break;
+                    case 1:
+                        x = 1;
+                        y = 2;
+                        break;
+                    case 2:
+                        x = 0;
                         break;
                 }
                 break;
