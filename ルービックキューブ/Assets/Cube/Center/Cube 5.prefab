@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 3058707489080560189}
   m_Layer: 0
   m_Name: Quad1
-  m_TagString: Untagged
+  m_TagString: Green Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -747,3 +747,6 @@ MonoBehaviour:
   _center: {x: 1, y: 1, z: 0}
   _axis: {x: 0, y: 0, z: 1}
   _period: 2
+  Terget: 0
+  flag: 0
+  z: 0

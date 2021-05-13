@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2064470316689764735}
   m_Layer: 0
   m_Name: Quad2
-  m_TagString: Untagged
+  m_TagString: Yellow Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 4855256505855117506}
   m_Layer: 0
   m_Name: Quad1
-  m_TagString: Untagged
+  m_TagString: Green Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -618,6 +618,9 @@ MonoBehaviour:
   _center: {x: 1, y: 1, z: 0}
   _axis: {x: 0, y: 0, z: 1}
   _period: 2
+  Terget: 0
+  flag: 0
+  z: 0
 --- !u!54 &-2211720220725005662
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -649,7 +652,7 @@ GameObject:
   - component: {fileID: 7248707520836220984}
   m_Layer: 0
   m_Name: Quad3
-  m_TagString: Untagged
+  m_TagString: Blue Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

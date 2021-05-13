@@ -9,6 +9,9 @@ TagManager:
   - Corner
   - Target geme object
   - TargetGameObject
+  - Blue Panel
+  - Green Panel
+  - Yellow Panel
   layers:
   - Default
   - TransparentFX
