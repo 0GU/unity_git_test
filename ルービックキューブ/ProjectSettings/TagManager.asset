@@ -11,6 +11,10 @@ TagManager:
   - yellow panel
   - blue panel
   - green panel
+  - Green
+  - Yellow
+  - Blue
+  - Generater
   layers:
   - Default
   - TransparentFX

@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class Rotation_control : MonoBehaviour
 {
+
     // Start is called before the first frame update
     GameObject[] tag1_Objects; //‘ã“ü—p‚ÌƒQ[ƒ€ƒIƒuƒWƒFƒNƒg”z—ñ‚ğ—pˆÓ
 
     Rotate_cube Front;
 
+    GameObject[] Change_G; //‘ã“ü—p‚ÌƒQ[ƒ€ƒIƒuƒWƒFƒNƒg”z—ñ‚ğ—pˆÓ
+    CSVReader Change;
+
     Vector3 Axis = new Vector3(0, 1, 0);
     [SerializeField] public bool flag = false;
-     public bool[] cubeflag = new bool[27];
+    public bool[] cubeflag = new bool[27];
 
     int c_num = 0;
     void Start()
     {
+        Change_G = GameObject.FindGameObjectsWithTag("Generater");
+        Change = Change_G[0].GetComponent<CSVReader>();
+
         for (int init = 0; init < 27; init++)
         {
             cubeflag[init] = false;
@@ -28,6 +35,10 @@ public class Rotation_control : MonoBehaviour
         //‰E‰ñ“]
         if (Input.GetKeyDown(KeyCode.Alpha1) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false)
         {
+            flag = true;
+
+           Change.ChangeArrayX(0, true);
+
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
 
             for (int i = 0; i < tag1_Objects.Length; i++)
@@ -50,6 +61,10 @@ public class Rotation_control : MonoBehaviour
         //¶‰ñ“]
         if (Input.GetKeyDown(KeyCode.Alpha1) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false)
         {
+            flag = true;
+
+            Change.ChangeArrayX(0, false);
+
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
 
             for (int i = 0; i < tag1_Objects.Length; i++)
@@ -70,6 +85,10 @@ public class Rotation_control : MonoBehaviour
         //‰E‰ñ“]
         if (Input.GetKeyDown(KeyCode.Alpha2) && (Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false)
         {
+            flag = true;
+
+            Change.ChangeArrayX(1, true);
+
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
 
             for (int i = 0; i < tag1_Objects.Length; i++)
@@ -91,6 +110,10 @@ public class Rotation_control : MonoBehaviour
         //¶‰ñ“]
         if (Input.GetKeyDown(KeyCode.Alpha2) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false)
         {
+            flag = true;
+
+            Change.ChangeArrayX(1, false);
+
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
 
             for (int i = 0; i < tag1_Objects.Length; i++)
@@ -113,6 +136,10 @@ public class Rotation_control : MonoBehaviour
         //‰E‰ñ“]
         if (Input.GetKeyDown(KeyCode.Alpha3) && (Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false)
         {
+            flag = true;
+
+            Change.ChangeArrayX(2, true);
+
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
 
             for (int i = 0; i < tag1_Objects.Length; i++)
@@ -135,6 +162,10 @@ public class Rotation_control : MonoBehaviour
         //¶‰ñ“]
         if (Input.GetKeyDown(KeyCode.Alpha3) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false)
         {
+            flag = true;
+
+            Change.ChangeArrayX(2, false);
+
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
 
             for (int i = 0; i < tag1_Objects.Length; i++)
@@ -156,6 +187,10 @@ public class Rotation_control : MonoBehaviour
         //‰E‰ñ“]
         if (Input.GetKeyDown(KeyCode.Alpha4) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false)
         {
+            flag = true;
+
+            Change.ChangeArrayY(0, false);
+
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
 
             for (int i = 0; i < tag1_Objects.Length; i++)
@@ -176,6 +211,10 @@ public class Rotation_control : MonoBehaviour
         //¶‰ñ“]
         if (Input.GetKeyDown(KeyCode.Alpha4) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false)
         {
+            flag = true;
+
+            Change.ChangeArrayY(0, true);
+
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
 
             for (int i = 0; i < tag1_Objects.Length; i++)
@@ -197,6 +236,10 @@ public class Rotation_control : MonoBehaviour
         //‰E‰ñ“]
         if (Input.GetKeyDown(KeyCode.Alpha5) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false)
         {
+            flag = true;
+
+            Change.ChangeArrayY(1, false);
+
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
 
             for (int i = 0; i < tag1_Objects.Length; i++)
@@ -217,6 +260,10 @@ public class Rotation_control : MonoBehaviour
         //¶‰ñ“]
         if (Input.GetKeyDown(KeyCode.Alpha5) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false)
         {
+            flag = true;
+
+            Change.ChangeArrayY(1, true);
+
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
 
             for (int i = 0; i < tag1_Objects.Length; i++)
@@ -238,6 +285,10 @@ public class Rotation_control : MonoBehaviour
         //‰E‰ñ“]
         if (Input.GetKeyDown(KeyCode.Alpha6) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false)
         {
+            flag = true;
+
+            Change.ChangeArrayY(2, false);
+
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
 
             for (int i = 0; i < tag1_Objects.Length; i++)
@@ -258,6 +309,10 @@ public class Rotation_control : MonoBehaviour
         //¶‰ñ“]
         if (Input.GetKeyDown(KeyCode.Alpha6) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false)
         {
+            flag = true;
+
+            Change.ChangeArrayY(2, true);
+
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
 
             for (int i = 0; i < tag1_Objects.Length; i++)
@@ -279,6 +334,12 @@ public class Rotation_control : MonoBehaviour
         //¶‰ñ“]
         if (Input.GetKeyDown(KeyCode.Alpha7) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false)
         {
+            flag = true;
+
+
+
+            Change.ChangeArrayZ(0, false);
+
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
 
             for (int i = 0; i < tag1_Objects.Length; i++)
@@ -287,40 +348,10 @@ public class Rotation_control : MonoBehaviour
                 if (Front.z == 0)
                 {
 
+
+                    Axis = new Vector3(0, 0, 1);
                     cubeflag[c_num] = true;
-                    if ((Front.num_y == 0&& Front.num_x==0)|| (Front.num_y == 2 && Front.num_x == 2))
-                    {
-                        Axis = new Vector3(0, 0, 1);
-                        Front.degree_rotationZ(Axis, c_num);
-                    }
-                    else if (Front.num_y == 2||Front.num_x==2)
-                    {
-                        Axis = new Vector3(0, 0, 1);
-                        Front.degree_rotationZT(Axis, c_num);
-                    }
-                    else if (Front.num_x == 1)
-                    {
-                        Axis = new Vector3(0, 0, 1);
-                        Front.degree_rotationZ(Axis, c_num);
-                    }
-
-                    else if (Front.num_x == 3)
-                    {
-                        Axis = new Vector3(0, 0, 1);
-                        Front.degree_rotationZT(-Axis, c_num);
-                    }
-
-                    else if (Front.num_y == 1)
-                    {
-                        Axis = new Vector3(0, 0, 1);
-                        Front.degree_rotationXR(-Axis, c_num);
-                    }
-                
-                    else if (Front.num_y == 3)
-                    {
-                        Axis = new Vector3(0, 0, 1);
-                        Front.degree_rotationX(Axis, c_num);
-                    }
+                    Front.degree_rotationZ(Axis, c_num);
                     c_num++;
                 }
 
@@ -332,6 +363,10 @@ public class Rotation_control : MonoBehaviour
         //‰E‰ñ“]
         if (Input.GetKeyDown(KeyCode.Alpha7) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false)
         {
+            flag = true;
+
+            Change.ChangeArrayZ(0, true);
+
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
 
             for (int i = 0; i < tag1_Objects.Length; i++)
@@ -341,17 +376,10 @@ public class Rotation_control : MonoBehaviour
                 {
 
                     cubeflag[c_num] = true;
-                    if (Front.num_y == 0)
-                    {
-                        Axis = new Vector3(0, 0, 1);
-                        Front.degree_rotationZR(Axis, c_num);
-                    }
 
-                    else if (Front.num_y == 2)
-                    {
-                        Axis = new Vector3(0, 0, 1);
-                        Front.degree_rotationZ(-Axis, c_num);
-                    }
+                    Axis = new Vector3(0, 0, 1);
+                    Front.degree_rotationZR(Axis, c_num);
+
                 }
 
                 c_num = 0;
@@ -361,6 +389,10 @@ public class Rotation_control : MonoBehaviour
         //¶‰ñ“]
         if (Input.GetKeyDown(KeyCode.Alpha8) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false)
         {
+            flag = true;
+
+            Change.ChangeArrayZ(1, false);
+
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
 
             for (int i = 0; i < tag1_Objects.Length; i++)
@@ -370,17 +402,10 @@ public class Rotation_control : MonoBehaviour
                 {
 
                     cubeflag[c_num] = true;
-                    if (Front.num_y == 0)
-                    {
-                        Axis = new Vector3(0, 0, 1);
-                        Front.degree_rotationZ(Axis, c_num);
-                    }
 
-                    else if (Front.num_y == 2)
-                    {
-                        Axis = new Vector3(0, 0, 1);
-                        Front.degree_rotationZR(-Axis, c_num);
-                    }
+                    Axis = new Vector3(0, 0, 1);
+                    Front.degree_rotationZ(Axis, c_num);
+
 
                     c_num++;
                 }
@@ -393,6 +418,10 @@ public class Rotation_control : MonoBehaviour
         //‰E‰ñ“]
         if (Input.GetKeyDown(KeyCode.Alpha8) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false)
         {
+            flag = true;
+
+            Change.ChangeArrayZ(1, true);
+
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
 
             for (int i = 0; i < tag1_Objects.Length; i++)
@@ -402,17 +431,9 @@ public class Rotation_control : MonoBehaviour
                 {
 
                     cubeflag[c_num] = true;
-                    if (Front.num_y == 0)
-                    {
-                        Axis = new Vector3(0, 0, 1);
-                        Front.degree_rotationZR(Axis, c_num);
-                    }
+                    Axis = new Vector3(0, 0, 1);
+                    Front.degree_rotationZR(Axis, c_num);
 
-                    else if (Front.num_y == 2)
-                    {
-                        Axis = new Vector3(0, 0, 1);
-                        Front.degree_rotationZ(-Axis, c_num);
-                    }
                 }
 
                 c_num = 0;
@@ -422,6 +443,10 @@ public class Rotation_control : MonoBehaviour
         //¶‰ñ“]
         if (Input.GetKeyDown(KeyCode.Alpha9) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false)
         {
+            flag = true;
+
+            Change.ChangeArrayZ(2, false);
+
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
 
             for (int i = 0; i < tag1_Objects.Length; i++)
@@ -431,17 +456,9 @@ public class Rotation_control : MonoBehaviour
                 {
 
                     cubeflag[c_num] = true;
-                    if (Front.num_y == 0)
-                    {
-                        Axis = new Vector3(0, 0, 1);
-                        Front.degree_rotationZ(Axis, c_num);
-                    }
 
-                    else if (Front.num_y == 2)
-                    {
-                        Axis = new Vector3(0, 0, 1);
-                        Front.degree_rotationZR(-Axis, c_num);
-                    }
+                    Axis = new Vector3(0, 0, 1);
+                    Front.degree_rotationZ(Axis, c_num);
 
                     c_num++;
                 }
@@ -454,6 +471,10 @@ public class Rotation_control : MonoBehaviour
         //‰E‰ñ“]
         if (Input.GetKeyDown(KeyCode.Alpha9) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false)
         {
+            flag = true;
+
+            Change.ChangeArrayZ(2, true);
+
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
 
             for (int i = 0; i < tag1_Objects.Length; i++)
@@ -463,22 +484,22 @@ public class Rotation_control : MonoBehaviour
                 {
 
                     cubeflag[c_num] = true;
-                    if (Front.num_y == 0)
-                    {
-                        Axis = new Vector3(0, 0, 1);
-                        Front.degree_rotationZR(Axis, c_num);
-                    }
 
-                    else if (Front.num_y == 2)
-                    {
-                        Axis = new Vector3(0, 0, 1);
-                        Front.degree_rotationZ(-Axis, c_num);
-                    }
+                    Axis = new Vector3(0, 0, 1);
+                    Front.degree_rotationZR(Axis, c_num);
+
                 }
 
                 c_num = 0;
             }
         }
+
+        if(flag_check(cubeflag) == false&&flag==true)
+        {
+            flag = false;
+            Change.ChangeGenerate();
+        }
+        
 
     }
     static bool flag_check(bool[] c_flag)
