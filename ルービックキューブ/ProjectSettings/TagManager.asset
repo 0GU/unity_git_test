@@ -8,6 +8,9 @@ TagManager:
   - Sub
   - Corner
   - Cube
+  - yellow panel
+  - blue panel
+  - green panel
   layers:
   - Default
   - TransparentFX
