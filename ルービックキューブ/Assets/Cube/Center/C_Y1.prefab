@@ -663,7 +663,7 @@ GameObject:
   - component: {fileID: 6628014547917231797}
   m_Layer: 0
   m_Name: Quad1
-  m_TagString: Untagged
+  m_TagString: Yellow Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
