@@ -8,13 +8,13 @@ TagManager:
   - Sub
   - Corner
   - Cube
-  - yellow panel
-  - blue panel
-  - green panel
   - Green
   - Yellow
   - Blue
   - Generater
+  - Blue Panel
+  - Green Panel
+  - Yellow Panel
   layers:
   - Default
   - TransparentFX
