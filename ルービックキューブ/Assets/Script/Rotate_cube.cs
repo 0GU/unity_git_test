@@ -72,7 +72,7 @@ public class Rotate_cube : MonoBehaviour
             360 / _period * Time.deltaTime);
             await Task.Delay(1);
 
-        } while (transform.localEulerAngles.x < 89);
+        } while (transform.localEulerAngles.x < 88);
 
         Stop.cubeflag[flag_num] = false;
 
@@ -92,7 +92,7 @@ public class Rotate_cube : MonoBehaviour
          -_axis,
            360 / _period * Time.deltaTime);
             await Task.Delay(1);
-        } while (transform.localEulerAngles.x > 271 || transform.localEulerAngles.x < 1);
+        } while (transform.localEulerAngles.x > 272 || transform.localEulerAngles.x < 1);
 
 
         Stop.cubeflag[flag_num] = false;
