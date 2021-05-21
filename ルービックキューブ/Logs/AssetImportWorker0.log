@@ -15,11 +15,11 @@ C:/Users/GA3/Desktop/unity_git_test/ルービックキューブ
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54364
+54443
 Successfully changed project path to: C:/Users/GA3/Desktop/unity_git_test/ルービックキューブ
 C:/Users/GA3/Desktop/unity_git_test/ルービックキューブ
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 22.86 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 22.59 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.2f1 (8fd9074bf66c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Resources/UnitySubsystems
@@ -35,31 +35,31 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56036
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56284
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001663 seconds.
+Registered in 0.001690 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 23.75 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 23.28 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.867 seconds
+- Completed reload, in  0.884 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000762 seconds.
+Registered in 0.000603 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.666 seconds
+- Completed reload, in  0.647 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
@@ -71,29 +71,29 @@ System memory in use before: 65.7 MB.
 System memory in use after: 64.5 MB.
 
 Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1591.
-Total: 2.539400 ms (FindLiveObjects: 0.163700 ms CreateObjectMapping: 0.038100 ms MarkObjects: 1.388800 ms  DeleteObjects: 0.948100 ms)
+Total: 2.244500 ms (FindLiveObjects: 0.107200 ms CreateObjectMapping: 0.031100 ms MarkObjects: 1.342600 ms  DeleteObjects: 0.763000 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Cube/Center/C_B1.prefab
-  artifactKey: Guid(dd9c6a78945a76c4eaa6c612a1081403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cube/Center/C_B1.prefab using Guid(dd9c6a78945a76c4eaa6c612a1081403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2688c1d9f5e5c95a15f65b4a5456accd') in 0.070481 seconds
-  Import took 0.072392 seconds .
+  path: Assets/Cube/Center/C_B2.prefab
+  artifactKey: Guid(1da007afee32b1f47bb60996434a17f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cube/Center/C_B2.prefab using Guid(1da007afee32b1f47bb60996434a17f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7badef84af7cf8e9ab3c87a9829d0340') in 0.073710 seconds
+  Import took 0.077640 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.904451 seconds.
-  path: Assets/Cube/Center/C_B1.prefab
-  artifactKey: Guid(dd9c6a78945a76c4eaa6c612a1081403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cube/Center/C_B1.prefab using Guid(dd9c6a78945a76c4eaa6c612a1081403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd809b47cd8bce1c064e0e452015aade1') in 0.010226 seconds
-  Import took 0.012468 seconds .
+  Time since last request: 23.154757 seconds.
+  path: Assets/Cube/Center/C_B3.prefab
+  artifactKey: Guid(324861bea2e96bc4aad4d48d6112d3ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cube/Center/C_B3.prefab using Guid(324861bea2e96bc4aad4d48d6112d3ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43da33ccae7a78ae9682a6d18cd90c8b') in 0.009070 seconds
+  Import took 0.011034 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.891751 seconds.
-  path: Assets/Cube/Center/C_B1.prefab
-  artifactKey: Guid(dd9c6a78945a76c4eaa6c612a1081403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cube/Center/C_B1.prefab using Guid(dd9c6a78945a76c4eaa6c612a1081403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88e5898611867dafe34853b45efa341f') in 0.008224 seconds
-  Import took 0.010015 seconds .
+  Time since last request: 13.182807 seconds.
+  path: Assets/Cube/Center/C_Y6.prefab
+  artifactKey: Guid(93067ea81e68d984291ed148c6dec570) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cube/Center/C_Y6.prefab using Guid(93067ea81e68d984291ed148c6dec570) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce20158b3d087febe620bed31b6baf00') in 0.007962 seconds
+  Import took 0.010139 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

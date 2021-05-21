@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -9045826612291635031}
   - component: {fileID: -2422526402608154926}
   m_Layer: 0
-  m_Name: C_Y1_3
+  m_Name: C_Y6
   m_TagString: Cube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 967588712655594320}
   m_Layer: 0
   m_Name: Quad6
-  m_TagString: Yellow
+  m_TagString: Yellow Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
