@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2268647282255294317}
   m_Layer: 0
   m_Name: Quad1
-  m_TagString: Untagged
+  m_TagString: Green Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 1116776288138687271}
   - component: {fileID: 5260191126189668143}
   m_Layer: 0
-  m_Name: Cube 4
+  m_Name: C_B3_G1
   m_TagString: Cube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -523,6 +523,7 @@ MonoBehaviour:
   _period: 2
   Terget_Y: 0
   Terget_Z: 0
+  rot: {x: 0, y: 0, z: 0, w: 0}
   pos: {x: 0, y: 0, z: 0}
   x: 0
   y: 0
@@ -662,7 +663,7 @@ GameObject:
   - component: {fileID: 5826020869182451142}
   m_Layer: 0
   m_Name: Quad3
-  m_TagString: Untagged
+  m_TagString: Blue Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
