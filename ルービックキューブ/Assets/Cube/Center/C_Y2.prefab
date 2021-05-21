@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8303528221539104799}
   m_Layer: 0
   m_Name: Quad2
-  m_TagString: Yellow
+  m_TagString: Yellow Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: -4266205987507944464}
   - component: {fileID: -2600741526881826137}
   m_Layer: 0
-  m_Name: "C_Y1_1 - \u30B3\u30D4\u30FC"
+  m_Name: C_Y2
   m_TagString: Cube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
