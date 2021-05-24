@@ -11,6 +11,10 @@ public class TagCheck : MonoBehaviour
     GameObject[] Bluetag_Objects; //代入用のゲームオブジェクト配列を用意
     GameObject[] Yellowtag_Objects; //代入用のゲームオブジェクト配列を用意
 
+    GameObject[] Green_Objects; //代入用のゲームオブジェクト配列を用意
+    GameObject[] Blue_Objects; //代入用のゲームオブジェクト配列を用意
+    GameObject[] Yellow_Objects; //代入用のゲームオブジェクト配列を用意
+
     [SerializeField] public GameObject Green;
     [SerializeField] public GameObject Blue;
     [SerializeField] public GameObject Yellow;
@@ -111,6 +115,24 @@ public class TagCheck : MonoBehaviour
                         Instantiate(Yellow, new Vector3(Yellow_trans.x, Yellow_trans.y - 0.5f, Yellow_trans.z), Quaternion.identity);
                         break;
                 }
+            }
+        }
+        else if(Input.GetKeyDown(KeyCode.D))
+        {
+            Blue_Objects = GameObject.FindGameObjectsWithTag("Blue");
+            Green_Objects = GameObject.FindGameObjectsWithTag("Green");
+            Yellow_Objects = GameObject.FindGameObjectsWithTag("Yellow");
+            for (int i = 0; i < Blue_Objects.Length; i++)
+            {
+                Destroy(Blue_Objects[i]);
+            }
+            for (int i = 0; i < Green_Objects.Length; i++)
+            {
+                Destroy(Green_Objects[i]);
+            }
+            for (int i = 0; i < Yellow_Objects.Length; i++)
+            {
+                Destroy(Yellow_Objects[i]);
             }
         }
     }
