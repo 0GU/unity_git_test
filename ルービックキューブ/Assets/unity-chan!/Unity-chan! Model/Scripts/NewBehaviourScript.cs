@@ -8,7 +8,6 @@ public class NewBehaviourScript : MonoBehaviour
     void Start()
     {
         Debug.Log("unitychan step cube is yellow");
-        GameObject[] cube = GameObject.FindGameObjectsWithTag("yellow panel");
 
         Debug.Log("unitychan step cube is blue");
         GameObject[] cube1 = GameObject.FindGameObjectsWithTag("blue panel");
