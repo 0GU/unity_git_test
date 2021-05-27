@@ -16,4 +16,9 @@ public class Scenechange : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
+
+    public void PushButton2()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
 }
