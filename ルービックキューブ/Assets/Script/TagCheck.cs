@@ -36,7 +36,7 @@ public class TagCheck : MonoBehaviour
         Bluetag_Objects = GameObject.FindGameObjectsWithTag("Blue Panel");
         Yellowtag_Objects = GameObject.FindGameObjectsWithTag("Yellow Panel");
 
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             for (int g = 0; g < Greentag_Objects.Length; g++)
             {
