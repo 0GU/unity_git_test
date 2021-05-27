@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System.Threading.Tasks;
 
 public class CSVReader : MonoBehaviour
 {
@@ -21,15 +22,23 @@ public class CSVReader : MonoBehaviour
 
     public GameObject[] Cube_Blue_Green_Yellow = new GameObject[48];
 
+    
+
     public int[,] Change_Cube = new int[3, 9];
 
     int g=0;
 
     public bool flag = false;
 
+    GameObject[] Wall; //代入用のゲームオブジェクト配列を用意
+
+    BlockControl Wall_Active;
 
     void Start()
     {
+        Wall = GameObject.FindGameObjectsWithTag("Block_cont");
+        Wall_Active = Wall[0].GetComponent<BlockControl>();
+
         csvFile = Resources.Load("STAGE1") as TextAsset; // Resouces下のCSV読み込み
         StringReader reader = new StringReader(csvFile.text);
 
@@ -58,6 +67,8 @@ public class CSVReader : MonoBehaviour
         ChangeGenerate();
 
         tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
+
+       
     }
 
     private void Update()
@@ -67,13 +78,14 @@ public class CSVReader : MonoBehaviour
     }
 
 
-    public void ChangeGenerate()
+    public async void ChangeGenerate()
     {
         tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
         for (int i = 0; i < tag1_Objects.Length; i++)
         {
             Destroy(tag1_Objects[i]);
         }
+       
         for (int h = 0; h < 3; h++)
         // csvDatas[行][列]を指定して値を自由に取り出せる
         {
@@ -126,8 +138,12 @@ public class CSVReader : MonoBehaviour
                 }
 
             }
-
+            
         }
+        await Task.Delay(10);
+        Wall_Active.Active_false();
+        Wall_Active.Color_Save();
+        Wall_Active.Active_true();
 
     }
     public void ChangeArrayX(int num, bool R)

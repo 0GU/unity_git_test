@@ -24,7 +24,7 @@ namespace UnityChan
 
 		// 以下キャラクターコントローラ用パラメタ
 		// 前進速度
-		public float forwardSpeed = 7.0f;
+		public float forwardSpeed = 2.0f;
 		// 後退速度
 		public float backwardSpeed = 2.0f;
 		// 旋回速度
@@ -85,7 +85,7 @@ namespace UnityChan
 			velocity = transform.TransformDirection (velocity);
 			//以下のvの閾値は、Mecanim側のトランジションと一緒に調整する
 			if (v > 0.1) {
-				velocity *= forwardSpeed;		// 移動速度を掛ける
+				velocity *= forwardSpeed-5;		// 移動速度を掛ける
 			} else if (v < -0.1) {
 				velocity *= backwardSpeed;	// 移動速度を掛ける
 			}
