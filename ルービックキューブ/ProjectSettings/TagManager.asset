@@ -18,6 +18,7 @@ TagManager:
   - Active
   - Cube_Rotato
   - Block_cont
+  - Red Panel
   layers:
   - Default
   - TransparentFX

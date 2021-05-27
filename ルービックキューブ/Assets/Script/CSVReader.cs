@@ -22,7 +22,9 @@ public class CSVReader : MonoBehaviour
 
     public GameObject[] Cube_Blue_Green_Yellow = new GameObject[48];
 
-    
+    public GameObject[] Cube_Red = new GameObject[102];
+
+
 
     public int[,] Change_Cube = new int[3, 9];
 
@@ -133,6 +135,11 @@ public class CSVReader : MonoBehaviour
                     {
                         //Instantiate(生成したいGameObject, 位置, 姿勢);
                         Instantiate(Cube_Blue_Green_Yellow[(Change_Cube[h, j + (i * 3)]) - 91], new Vector3(j, 2 - i, h), Quaternion.identity);
+                    }
+                    else if (Change_Cube[h, j + (i * 3)] >= 139 && Change_Cube[h, j + (i * 3)] <= 241)
+                    {
+                        //Instantiate(生成したいGameObject, 位置, 姿勢);
+                        Instantiate(Cube_Red[(Change_Cube[h, j + (i * 3)]) - 139], new Vector3(j, 2 - i, h), Quaternion.identity);
                     }
 
                 }
