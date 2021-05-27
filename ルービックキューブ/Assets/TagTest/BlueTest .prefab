@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5168039230837518719}
   - component: {fileID: 7618487337652025535}
   - component: {fileID: 9058636410768059026}
-  - component: {fileID: -2039580397522788178}
+  - component: {fileID: 657989899025973844}
   m_Layer: 0
   m_Name: 'BlueTest '
   m_TagString: Blue
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f35180ba1046831468ec7061cf2837ab, type: 2}
+  - {fileID: 2100000, guid: 16ff88c52b255e44990af20c23020822, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,7 +96,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-2039580397522788178
+--- !u!114 &657989899025973844
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,6 +105,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5998807338827566995}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85d19481940176b43b00533bf83090f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 340df6afd3432f04e8c79c11e05c8c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

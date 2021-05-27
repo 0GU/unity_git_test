@@ -15,6 +15,9 @@ TagManager:
   - Blue Panel
   - Green Panel
   - Yellow Panel
+  - Active
+  - Cube_Rotato
+  - Block_cont
   layers:
   - Default
   - TransparentFX
