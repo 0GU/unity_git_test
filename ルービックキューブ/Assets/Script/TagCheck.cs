@@ -91,31 +91,31 @@ public class TagCheck : MonoBehaviour
                 }
             }
 
-            for (int y = 0; y < Yellowtag_Objects.Length; y++)
-            {
-                Yellow_trans = Yellowtag_Objects[y].transform.position;
-                switch (Yellowtag_Objects[y].name)
-                {
-                    case "Quad1":
-                        Instantiate(Yellow, new Vector3(Yellow_trans.x, Yellow_trans.y, Yellow_trans.z - 0.5f), Quaternion.identity);
-                        break;
-                    case "Quad2":
-                        Instantiate(Yellow, new Vector3(Yellow_trans.x, Yellow_trans.y + 0.5f, Yellow_trans.z), Quaternion.identity);
-                        break;
-                    case "Quad3":
-                        Instantiate(Yellow, new Vector3(Yellow_trans.x - 0.5f, Yellow_trans.y, Yellow_trans.z), Quaternion.identity);
-                        break;
-                    case "Quad4":
-                        Instantiate(Yellow, new Vector3(Yellow_trans.x + 0.5f, Yellow_trans.y, Yellow_trans.z), Quaternion.identity);
-                        break;
-                    case "Quad5":
-                        Instantiate(Yellow, new Vector3(Yellow_trans.x, Yellow_trans.y, Yellow_trans.z + 0.5f), Quaternion.identity);
-                        break;
-                    case "Quad6":
-                        Instantiate(Yellow, new Vector3(Yellow_trans.x, Yellow_trans.y - 0.5f, Yellow_trans.z), Quaternion.identity);
-                        break;
-                }
-            }
+            //for (int y = 0; y < Yellowtag_Objects.Length; y++)
+            //{
+            //    Yellow_trans = Yellowtag_Objects[y].transform.position;
+            //    switch (Yellowtag_Objects[y].name)
+            //    {
+            //        case "Quad1":
+            //            Instantiate(Yellow, new Vector3(Yellow_trans.x, Yellow_trans.y, Yellow_trans.z - 0.5f), Quaternion.identity);
+            //            break;
+            //        case "Quad2":
+            //            Instantiate(Yellow, new Vector3(Yellow_trans.x, Yellow_trans.y + 0.5f, Yellow_trans.z), Quaternion.identity);
+            //            break;
+            //        case "Quad3":
+            //            Instantiate(Yellow, new Vector3(Yellow_trans.x - 0.5f, Yellow_trans.y, Yellow_trans.z), Quaternion.identity);
+            //            break;
+            //        case "Quad4":
+            //            Instantiate(Yellow, new Vector3(Yellow_trans.x + 0.5f, Yellow_trans.y, Yellow_trans.z), Quaternion.identity);
+            //            break;
+            //        case "Quad5":
+            //            Instantiate(Yellow, new Vector3(Yellow_trans.x, Yellow_trans.y, Yellow_trans.z + 0.5f), Quaternion.identity);
+            //            break;
+            //        case "Quad6":
+            //            Instantiate(Yellow, new Vector3(Yellow_trans.x, Yellow_trans.y - 0.5f, Yellow_trans.z), Quaternion.identity);
+            //            break;
+            //    }
+            //}
         }
         else if(Input.GetKeyDown(KeyCode.D))
         {

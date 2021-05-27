@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityChan;
 
 public class Rotation_control : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Rotation_control : MonoBehaviour
     GameObject[] Change_G; //代入用のゲームオブジェクト配列を用意
     CSVReader Change;
 
+   
     Vector3 Axis = new Vector3(0, 1, 0);
     [SerializeField] public bool flag = false;
     public bool[] cubeflag = new bool[27];
@@ -22,6 +24,8 @@ public class Rotation_control : MonoBehaviour
     {
         Change_G = GameObject.FindGameObjectsWithTag("Generater");
         Change = Change_G[0].GetComponent<CSVReader>();
+
+      
 
         for (int init = 0; init < 27; init++)
         {
@@ -35,6 +39,7 @@ public class Rotation_control : MonoBehaviour
         //右回転
         if (Input.GetKeyDown(KeyCode.Alpha1) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false)
         {
+            
             flag = true;
 
            Change.ChangeArrayX(0, true);
