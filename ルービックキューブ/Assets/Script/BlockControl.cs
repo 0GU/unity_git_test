@@ -218,7 +218,6 @@ public class BlockControl : MonoBehaviour
 
     public void Active_false()
     {
-        Debug.LogWarning(10);
         for (int i = 0; i < ActiveCube.Length; i++)
         {
             ActiveCube[i].SetActive(false);
