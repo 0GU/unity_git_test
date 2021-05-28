@@ -21,4 +21,9 @@ public class Scenechange : MonoBehaviour
     {
         SceneManager.LoadScene("StageselectScene");
     }
+
+    public void PushButton3()
+    {
+        SceneManager.LoadScene("TitleScene");
+    }
 }
