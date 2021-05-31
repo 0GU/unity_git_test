@@ -20,6 +20,10 @@ TagManager:
   - Block_cont
   - Goal tag
   - Red Panel
+  - STAGE1
+  - STAGE2
+  - STAGE3
+  - STAGE4
   layers:
   - Default
   - TransparentFX
