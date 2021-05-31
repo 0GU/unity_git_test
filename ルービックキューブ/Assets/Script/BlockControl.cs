@@ -223,5 +223,37 @@ public class BlockControl : MonoBehaviour
             ActiveCube[i].SetActive(false);
         }
     }
+
+    public void Rotato_Active_trueX(int x)
+    {
+
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                Active_pos = ActiveCube[(i * 3) + j].transform.position;
+
+                if ((int)Active_pos.x == x)
+                    ActiveCube[(i * 3) + j].SetActive(true);
+            }
+        }
+
+    }
+
+    public void Rotato_Active_trueZ(int z)
+    {
+
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                Active_pos = ActiveCube[(i * 3) + j].transform.position;
+
+                if ((int)Active_pos.z == z)
+                    ActiveCube[(i * 3) + j].SetActive(true);
+            }
+        }
+
+    }
 }
 
