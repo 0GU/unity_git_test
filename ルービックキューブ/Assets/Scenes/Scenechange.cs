@@ -19,6 +19,11 @@ public class Scenechange : MonoBehaviour
 
     public void PushButton2()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("StageselectScene");
+    }
+
+    public void PushButton3()
+    {
+        SceneManager.LoadScene("TitleScene");
     }
 }

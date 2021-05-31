@@ -9,6 +9,7 @@ public class BlockControl : MonoBehaviour
     GameObject[] blue;
      GameObject[] green;
     GameObject[] yellow;
+    GameObject[] red;
 
     GameObject[] ActiveCube;
 
@@ -19,6 +20,7 @@ public class BlockControl : MonoBehaviour
     Vector3 Green_trans;
     Vector3 Blue_trans;
     Vector3 Yellow_trans;
+    Vector3 Red_trans;
 
     GameObject[] Cube_flag; //代入用のゲームオブジェクト配列を用意
     Rotation_control Check;
@@ -134,6 +136,7 @@ public class BlockControl : MonoBehaviour
         blue = GameObject.FindGameObjectsWithTag("Blue Panel");
         green = GameObject.FindGameObjectsWithTag("Green Panel");
         yellow = GameObject.FindGameObjectsWithTag("Yellow Panel");
+        red = GameObject.FindGameObjectsWithTag("Red Panel");
         for (int g = 0; g < green.Length; g++)
         {
             switch (green[g].name)
@@ -181,6 +184,21 @@ public class BlockControl : MonoBehaviour
                     break;
             }
         }
+        for (int r = 0; r < red.Length; r++)
+        {
+
+            switch (red[r].name)
+            {
+                case "Quad2":
+                    Red_trans = red[r].transform.position;
+
+                    color_save[(int)Red_trans.z, (int)Red_trans.x] = 3;
+                    break;
+
+                default:
+                    break;
+            }
+        }
     }
     public void Active_true()
     {
@@ -191,7 +209,7 @@ public class BlockControl : MonoBehaviour
             {
                 Active_pos = ActiveCube[(i * 3) + j].transform.position;
                 
-                if (color_save[(int)Active_pos.z, (int)Active_pos.x] != 2)
+                if (color_save[(int)Active_pos.z, (int)Active_pos.x] !< 2)
                     ActiveCube[(i * 3) + j].SetActive(true);
             }
         }
@@ -200,7 +218,6 @@ public class BlockControl : MonoBehaviour
 
     public void Active_false()
     {
-        Debug.LogWarning(10);
         for (int i = 0; i < ActiveCube.Length; i++)
         {
             ActiveCube[i].SetActive(false);
