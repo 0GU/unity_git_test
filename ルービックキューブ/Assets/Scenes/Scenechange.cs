@@ -12,18 +12,40 @@ public class Scenechange : MonoBehaviour
     }
 
     //ボタンが押されたらシーンチェンジする処理
+
+    //STAGE1にシーンチェンジ
     public void PushButton()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("STAGE1");
     }
 
+    //ステージセレクトにシーンチェンジ
     public void PushButton2()
     {
         SceneManager.LoadScene("StageselectScene");
     }
 
+    //タイトル画面にシーンチェンジ
     public void PushButton3()
     {
         SceneManager.LoadScene("TitleScene");
+    }
+
+    //STAGE2にシーンチェンジ
+    public void PushButton4()
+    {
+        SceneManager.LoadScene("STAGE2");
+    }
+
+    //STAGE3にシーンチェンジ
+    public void PushButton5()
+    {
+        SceneManager.LoadScene("STAGE3");
+    }
+
+    //STAGE4にシーンチェンジ
+    public void PushButton6()
+    {
+        SceneManager.LoadScene("STAGE4");
     }
 }
