@@ -19,6 +19,7 @@ TagManager:
   - Cube_Rotato
   - Block_cont
   - Goal tag
+  - Red Panel
   layers:
   - Default
   - TransparentFX
