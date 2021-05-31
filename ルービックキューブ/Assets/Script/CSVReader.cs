@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.IO;
 using System.Threading.Tasks;
+using UnityEngine.SceneManagement;
 
 public class CSVReader : MonoBehaviour
 {
@@ -36,13 +37,33 @@ public class CSVReader : MonoBehaviour
 
     BlockControl Wall_Active;
 
+    StringReader reader;
+
     void Start()
     {
         Wall = GameObject.FindGameObjectsWithTag("Block_cont");
         Wall_Active = Wall[0].GetComponent<BlockControl>();
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "STAGE1":
+                 csvFile = Resources.Load("STAGE1") as TextAsset; // Resouces下のCSV読み込み
+                 reader = new StringReader(csvFile.text);
+                break;
+            case "STAGE2":
+                 csvFile = Resources.Load("STAGE2") as TextAsset; // Resouces下のCSV読み込み
+                reader = new StringReader(csvFile.text);
+                break;
+            case "STAGE3":
+                 csvFile = Resources.Load("STAGE3") as TextAsset; // Resouces下のCSV読み込み
+                 reader = new StringReader(csvFile.text);
+                break;
+            case "STAGE4":
+                 csvFile = Resources.Load("STAGE4") as TextAsset; // Resouces下のCSV読み込み
+                reader = new StringReader(csvFile.text);
+                break;
+        }
 
-        csvFile = Resources.Load("STAGE1") as TextAsset; // Resouces下のCSV読み込み
-        StringReader reader = new StringReader(csvFile.text);
+       
 
         // , で分割しつつ一行ずつ読み込み
         // リストに追加していく

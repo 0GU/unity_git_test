@@ -22,8 +22,8 @@ public class UpDown4 : MonoBehaviour
         if (flag == false)
         {
             flag = true;
-            pos_set.x = 8;
-            pos_set.y = -5;
+            pos_set.x = 6;
+            pos_set.y = -3;
             transform.position = pos_set;
             pos = transform.position.y;
 
