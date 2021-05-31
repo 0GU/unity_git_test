@@ -16,7 +16,7 @@ public class Game : MonoBehaviour
         //もしゴールオブジェクトのコライダーに接触した時の処理。
         if (other.gameObject.tag== "Red Panel")
         {
-            Debug.Log(10);
+            //Debug.Log(10);
             //ゲームクリアテキストを表示させてキャラクターを非表示にします。
             gameclea.SetActive(true);
 
