@@ -7,7 +7,7 @@ public class CountDown : MonoBehaviour
 {
     private float time = 10.0f;
     public Text timerText;
-    public bool isTimeUp = false;
+    public bool isTimeUp;
 
     void Start()
     {
