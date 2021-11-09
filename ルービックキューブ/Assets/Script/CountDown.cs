@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,9 +5,9 @@ using UnityEngine.UI;
  
 public class CountDown : MonoBehaviour
 {
-    private float time = 180.5f;
+    private float time = 10.0f;
     public Text timerText;
-    public bool isTimeUp;
+    public bool isTimeUp = false;
 
     void Start()
     {
