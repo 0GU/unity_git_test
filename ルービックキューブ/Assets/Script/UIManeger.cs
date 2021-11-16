@@ -33,12 +33,12 @@ public class UIManeger : MonoBehaviour
         }
     }
 
-       //GamePanel‚ÅHelpButton‚ª‰Ÿ‚³‚ê‚½‚Ìˆ—
-       public void SelectGameDescription()
-       {
-            gamePanel.SetActive(false);
-            helpPanel.SetActive(true);
-       }
+    //GamePanel‚ÅHelpButton‚ª‰Ÿ‚³‚ê‚½‚Ìˆ—
+    public void SelectGameDescription()
+    {
+        gamePanel.SetActive(false);
+        helpPanel.SetActive(true);
+    }
 
     //HelpPanel‚ÅReturnButton‚ª‰Ÿ‚³‚ê‚½‚Ìˆ—
     public void SelectHelpDescription()
