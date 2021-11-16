@@ -32,8 +32,8 @@ public class CameraChange : MonoBehaviour
     void Update()
     {
 
-        //キーボード上Tキーが押されたら、メインカメラをアクティブに
-        if (Input.GetKeyDown(KeyCode.T))
+        //マウス右クリックが押されたら、メインカメラをアクティブに
+        if (Input.GetMouseButton(0))
         {
             //メインカメラをアクティブに設定
             MainCamera.SetActive(true);
@@ -44,8 +44,8 @@ public class CameraChange : MonoBehaviour
             Camera4.SetActive(false);
         }
 
-        //キーボード上Yキーが押されたら、カメラ2をアクティブに
-        if (Input.GetKeyDown(KeyCode.Y))
+        //左クリックが押されたら、カメラ2をアクティブに
+        if (Input.GetMouseButton(1))
         {
             //カメラ2をアクティブに設定
             Camera2.SetActive(true);
@@ -56,8 +56,8 @@ public class CameraChange : MonoBehaviour
             Camera4.SetActive(false);
         }
         
-        //キーボード上Uキーが押されたら、カメラ3をアクティブに
-        if (Input.GetKeyDown(KeyCode.U))
+        //マウスホイールがが押されたら、カメラ3をアクティブに
+        if (Input.GetMouseButton(2))
         {
             //カメラ3をアクティブに設定
             Camera3.SetActive(true);
