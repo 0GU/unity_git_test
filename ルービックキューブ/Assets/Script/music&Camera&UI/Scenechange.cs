@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Scenechange : MonoBehaviour
 {
-    // Start is called before the first frame update
+
     void Start()
     {
         
@@ -13,38 +13,37 @@ public class Scenechange : MonoBehaviour
 
     //ボタンが押されたらシーンチェンジする処理
 
-    //STAGE1にシーンチェンジ
-    public void PushButton()
-    {
-        SceneManager.LoadScene("STAGE1");
-    }
-
-    //ステージセレクトにシーンチェンジ
-    public void PushButton2()
-    {
-        SceneManager.LoadScene("StageselectScene");
-    }
-
     //タイトル画面にシーンチェンジ
-    public void PushButton3()
+    public void TitleButton()
     {
         SceneManager.LoadScene("TitleScene");
     }
 
+    //ステージセレクトにシーンチェンジ
+    public void SelectButton()
+    {
+        SceneManager.LoadScene("StageselectScene");
+    }
+    //STAGE1にシーンチェンジ
+    public void PushButton1()
+    {
+        SceneManager.LoadScene("STAGE1");
+    }
+
     //STAGE2にシーンチェンジ
-    public void PushButton4()
+    public void PushButton2()
     {
         SceneManager.LoadScene("STAGE2");
     }
 
     //STAGE3にシーンチェンジ
-    public void PushButton5()
+    public void PushButton3()
     {
         SceneManager.LoadScene("STAGE3");
     }
 
     //STAGE4にシーンチェンジ
-    public void PushButton6()
+    public void PushButton4()
     {
         SceneManager.LoadScene("STAGE4");
     }

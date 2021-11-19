@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIManeger : MonoBehaviour
 {
-    private float time = 10.0f;
+    private float time = 1000.0f;
     public Text timerText;
 
     //3‚Â‚ÌPanel‚ğŠi”[‚·‚é•Ï”
