@@ -12,12 +12,14 @@ public class UIManeger : MonoBehaviour
     [SerializeField] GameObject gamePanel;
     [SerializeField] GameObject helpPanel;
     [SerializeField] GameObject gameoverPanel;
+    [SerializeField] GameObject creditPanel;
 
     // Start is called before the first frame update
     void Start()
     {
         helpPanel.SetActive(false);
         gameoverPanel.SetActive(false);
+        creditPanel.SetActive(false);
     }
 
     void Update()
@@ -44,6 +46,18 @@ public class UIManeger : MonoBehaviour
     public void SelectHelpDescription()
     {
         helpPanel.SetActive(false);
+        gamePanel.SetActive(true);
+    }
+
+    public void CreditDescription()
+    {
+        gamePanel.SetActive(false);
+        creditPanel.SetActive(true);
+    }
+
+    public void TitleDescription()
+    {
+        creditPanel.SetActive(false);
         gamePanel.SetActive(true);
     }
 }
