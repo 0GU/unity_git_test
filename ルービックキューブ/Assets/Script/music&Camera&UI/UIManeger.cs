@@ -27,7 +27,7 @@ public class UIManeger : MonoBehaviour
         if (0 < time)
         {
             time -= Time.deltaTime;
-           //timerText.text = time.ToString("F1");
+           timerText.text = time.ToString("F1");
         }
         else if (time < 0)
         {
