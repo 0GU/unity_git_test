@@ -1067,7 +1067,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1078,7 +1078,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u30D6\u30ED\u30C3\u30AF\u306E\u56DE\u8EE2\u65B9\u6CD5\n\n1\u30AD\u30FC:X\u8EF8\u56DE\u8EE2(\u5DE6\u5074)\n2\u30AD\u30FC:X\u8EF8\u56DE\u8EE2(\u771F\u3093\u4E2D)\n3\u30AD\u30FC:X\u8EF8\u56DE\u8EE2(\u53F3\u5074)\n4\u30AD\u30FC:Y\u8EF8\u56DE\u8EE2(\u4E0B\u5074)\n5\u30AD\u30FC:Y\u8EF8\u56DE\u8EE2(\u771F\u3093\u4E2D)\n6\u30AD\u30FC:Y\u8EF8\u56DE\u8EE2(\u4E0A\u5074)\n7\u30AD\u30FC:Z\u8EF8\u56DE\u8EE2(\u624B\u524D\u5074)\n8\u30AD\u30FC:Z\u8EF8\u56DE\u8EE2(\u771F\u3093\u4E2D)\n9\u30AD\u30FC:Z\u8EF8\u56DE\u8EE2(\u5965\u5074)\n0\u30AD\u30FC:\u56DE\u8EE2\u306E\u5411\u304D\u3092\u9006\u65B9\u5411\u306B\u3059\u308B"
+  m_Text: "        Cube\u306E\u56DE\u8EE2\u65B9\u6CD5\n-------------------------------------\n1\u30AD\u30FC:X\u8EF8\u56DE\u8EE2(\u5DE6\u5074)\n2\u30AD\u30FC:X\u8EF8\u56DE\u8EE2(\u771F\u3093\u4E2D)\n3\u30AD\u30FC:X\u8EF8\u56DE\u8EE2(\u53F3\u5074)\n4\u30AD\u30FC:Y\u8EF8\u56DE\u8EE2(\u4E0B\u5074)\n5\u30AD\u30FC:Y\u8EF8\u56DE\u8EE2(\u771F\u3093\u4E2D)\n6\u30AD\u30FC:Y\u8EF8\u56DE\u8EE2(\u4E0A\u5074)\n7\u30AD\u30FC:Z\u8EF8\u56DE\u8EE2(\u624B\u524D\u5074)\n8\u30AD\u30FC:Z\u8EF8\u56DE\u8EE2(\u771F\u3093\u4E2D)\n9\u30AD\u30FC:Z\u8EF8\u56DE\u8EE2(\u5965\u5074)\n0\u30AD\u30FC:\u56DE\u8EE2\u306E\u5411\u304D\u3092\u9006\u65B9\u5411\u306B\u3059\u308B"
 --- !u!222 &412164179
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2200,7 +2200,7 @@ Skybox:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CustomSkybox: {fileID: 2100000, guid: cf09bdd74268f184498d51e302193dbf, type: 2}
 --- !u!1 &985958573
 GameObject:
@@ -2272,7 +2272,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u30AB\u30E1\u30E9\u306E\u5207\u308A\u66FF\u3048\n\nT\u30AD\u30FC:\u8996\u70B9\u5207\u308A\u66FF\u30481\nY\u30AD\u30FC:\u8996\u70B9\u5207\u308A\u66FF\u30482\nU\u30AD\u30FC:\u8996\u70B9\u5207\u308A\u66FF\u30483\nI\u30AD\u30FC:\u8996\u70B9\u5207\u308A\u66FF\u30484\n"
+  m_Text: "\u30AB\u30E1\u30E9\u306E\u5207\u308A\u66FF\u3048\n--------------------------------\n\u30DB\u30A4\u30FC\u30EB:\u62E1\u5927&\u7E2E\u5C0F\n"
 --- !u!222 &985958576
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2377,7 +2377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1088625688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3298,7 +3298,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -820, y: 100}
+  m_AnchoredPosition: {x: -760, y: 100}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1554950871
@@ -3334,9 +3334,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "             \u79FB\u52D5\u65B9\u6CD5\r\n\nW\u30AD\u30FC(\u2191\u30AD\u30FC):\u4E0A\u65B9\u5411\u9032\u3080\r\nS\u30AD\u30FC(\u2193\u30AD\u30FC)
-    :\u4E0B\u65B9\u5411\u9032\u3080\r\nA\u30AD\u30FC(\u2190\u30AD\u30FC) :\u5DE6\u65B9\u5411\u9032\u3080\r\nD\u30AD\u30FC(\u2192\u30AD\u30FC)
-    :\u53F3\u65B9\u5411\u9032\u3080"
+  m_Text: "        \u79FB\u52D5\u65B9\u6CD5\r\n--------------------------\n\u2191\u30AD\u30FC 
+    :\u4E0A\u65B9\u5411\u9032\u3080\r\n\n\u2193\u30AD\u30FC  :\u4E0B\u65B9\u5411\u9032\u3080\r\n\n\u2190\u30AD\u30FC:\u5DE6\u65B9\u5411\u9032\u3080\r\n\n\u2192\u30AD\u30FC:\u53F3\u65B9\u5411\u9032\u3080"
 --- !u!222 &1554950872
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3512,7 +3511,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250, y: 380}
+  m_AnchoredPosition: {x: -250, y: 420}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1659467405
@@ -3528,7 +3527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
