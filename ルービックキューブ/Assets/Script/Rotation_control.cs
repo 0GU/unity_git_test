@@ -12,7 +12,7 @@ public class Rotation_control : MonoBehaviour
 
     GameObject[] Change_G; //代入用のゲームオブジェクト配列を用意
     CSVReader Change;
-    
+
     GameObject[] Rotato_Active; //代入用のゲームオブジェクト配列を用意
     BlockControl Act;
 
@@ -50,7 +50,7 @@ public class Rotation_control : MonoBehaviour
             flag = true;
 
             Act.Rotato_Active_trueX(0);
-           Change.ChangeArrayX(0, true);
+            Change.ChangeArrayX(0, true);
 
             tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
 
@@ -98,7 +98,7 @@ public class Rotation_control : MonoBehaviour
             c_num = 0;
         }
         //右回転
-        if (Input.GetKeyDown(KeyCode.Alpha2) && (Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false &&( CharaPos.x < 0.25f || CharaPos.x > 1.745f))
+        if (Input.GetKeyDown(KeyCode.Alpha2) && (Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false && (CharaPos.x < 0.25f || CharaPos.x > 1.745f))
         {
             flag = true;
 
@@ -301,60 +301,10 @@ public class Rotation_control : MonoBehaviour
             c_num = 0;
         }
 
-        //右回転
-        if (Input.GetKeyDown(KeyCode.Alpha6) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false)
-        {
-            flag = true;
 
-
-            Change.ChangeArrayY(0, true);
-            Change.ChangeArrayY(1, true);
-
-            tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
-
-            for (int i = 0; i < tag1_Objects.Length; i++)
-            {
-                Front = tag1_Objects[i].GetComponent<Rotate_cube>();
-                if (Front.y == 0|| Front.y == 1)
-                {
-                    Axis = new Vector3(0, 1, 0);
-                    cubeflag[c_num] = true;
-                    Front.degree_rotationYR(Axis, c_num);
-                    c_num++;
-                }
-
-            }
-
-            c_num = 0;
-        }
-        //左回転
-        if (Input.GetKeyDown(KeyCode.Alpha6) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false)
-        {
-            flag = true;
-
-            Change.ChangeArrayY(0, false);
-            Change.ChangeArrayY(1, false);
-
-            tag1_Objects = GameObject.FindGameObjectsWithTag("Cube");
-
-            for (int i = 0; i < tag1_Objects.Length; i++)
-            {
-                Front = tag1_Objects[i].GetComponent<Rotate_cube>();
-                if (Front.y == 0 || Front.y == 1)
-                {
-                    Axis = new Vector3(0, 1, 0);
-                    cubeflag[c_num] = true;
-                    Front.degree_rotationY(Axis, c_num);
-                    c_num++;
-                }
-
-            }
-
-            c_num = 0;
-        }
 
         //左回転
-        if (Input.GetKeyDown(KeyCode.Alpha7) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false &&  CharaPos.z > 1.25f)
+        if (Input.GetKeyDown(KeyCode.Alpha6) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false && CharaPos.z > 1.25f)
         {
             flag = true;
 
@@ -382,7 +332,7 @@ public class Rotation_control : MonoBehaviour
         }
 
         //右回転
-        if (Input.GetKeyDown(KeyCode.Alpha7) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false && CharaPos.z > 1.25f)
+        if (Input.GetKeyDown(KeyCode.Alpha6) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false && CharaPos.z > 1.25f)
         {
             flag = true;
 
@@ -409,7 +359,7 @@ public class Rotation_control : MonoBehaviour
         }
 
         //左回転
-        if (Input.GetKeyDown(KeyCode.Alpha8) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false && ( CharaPos.z < 0.3f || CharaPos.z > 2.25f))
+        if (Input.GetKeyDown(KeyCode.Alpha7) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false && (CharaPos.z < 0.4f || CharaPos.z > 1.99f))
         {
             flag = true;
 
@@ -439,7 +389,7 @@ public class Rotation_control : MonoBehaviour
         }
 
         //右回転
-        if (Input.GetKeyDown(KeyCode.Alpha8) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false && (CharaPos.z < 0.3f || CharaPos.z > 2.25f))
+        if (Input.GetKeyDown(KeyCode.Alpha7) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false && (CharaPos.z < 0.4f || CharaPos.z > 1.99f))
         {
             flag = true;
 
@@ -465,7 +415,7 @@ public class Rotation_control : MonoBehaviour
         }
 
         //左回転
-        if (Input.GetKeyDown(KeyCode.Alpha9) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false && CharaPos.z < 1.25f)
+        if (Input.GetKeyDown(KeyCode.Alpha8) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false && CharaPos.z < 1.45f)
         {
             flag = true;
 
@@ -494,7 +444,7 @@ public class Rotation_control : MonoBehaviour
         }
 
         //右回転
-        if (Input.GetKeyDown(KeyCode.Alpha9) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false && CharaPos.z < 1.25f)
+        if (Input.GetKeyDown(KeyCode.Alpha8) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false && CharaPos.z < 1.45f)
         {
             flag = true;
 
@@ -520,12 +470,12 @@ public class Rotation_control : MonoBehaviour
             }
         }
 
-        if(flag_check(cubeflag) == false&&flag==true)
+        if (flag_check(cubeflag) == false && flag == true)
         {
             flag = false;
             Change.ChangeGenerate();
         }
-        
+
 
     }
     static bool flag_check(bool[] c_flag)
@@ -542,4 +492,7 @@ public class Rotation_control : MonoBehaviour
         }
         return false;
     }
+
+
+
 }
