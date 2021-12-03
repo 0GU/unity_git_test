@@ -39,7 +39,7 @@ public class SceneViewCamera : MonoBehaviour
 
         MouseDrag(Input.mousePosition);
 
-        if(Input.GetMouseButtonDown(0)==true||Input.GetKeyDown(KeyCode.R)==true)
+        if(Input.GetKeyDown(KeyCode.R)==true)
         {
             transform.position = Reset_pos;
             transform.rotation = Quaternion.identity;
@@ -59,7 +59,7 @@ public class SceneViewCamera : MonoBehaviour
         if (diff.magnitude < Vector3.kEpsilon)
             return;
 
-        if (Input.GetMouseButton(2))
+        if (Input.GetMouseButton(2)|| Input.GetMouseButton(0))
             transform.Translate(-diff * Time.deltaTime * moveSpeed);
         else if (Input.GetMouseButton(1))
             CameraRotate(new Vector2(-diff.y, diff.x) * rotateSpeed);
