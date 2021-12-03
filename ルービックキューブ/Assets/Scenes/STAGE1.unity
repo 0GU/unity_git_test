@@ -708,8 +708,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wheelSpeed: 5
-  moveSpeed: 0.5
-  rotateSpeed: 0.5
+  moveSpeed: 3.6
+  rotateSpeed: 0.1
   Reset_pos: {x: 1, y: 3, z: -4}
 --- !u!81 &202021477
 AudioListener:
@@ -769,13 +769,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202021475}
-  m_LocalRotation: {x: 0.030768448, y: -0.021083271, z: -0.00064915145, w: 0.99930394}
-  m_LocalPosition: {x: 0.38, y: 3.66, z: 0.34}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 3, z: -4}
   m_LocalScale: {x: 1, y: 1.5617, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 3.524, y: -2.422, z: -0.149}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!45 &202021480
 Skybox:
   m_ObjectHideFlags: 0
