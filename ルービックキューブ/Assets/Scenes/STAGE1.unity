@@ -707,7 +707,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wheelSpeed: 5
   moveSpeed: 0.5
-  rotateSpeed: 0.5
+  rotateSpeed: 0.1
+  Reset_pos: {x: 1, y: 4, z: -3}
 --- !u!81 &202021477
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1078,11 +1079,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "        Cube\u306E\u56DE\u8EE2\u65B9\u6CD5\n\n 1\u30AD\u30FC:\u7E26\u56DE\u8EE2(\u5DE6\u5074)\n2\u30AD\u30FC:\u7E26\u56DE\u8EE2(\u771F\u3093\u4E2D)\n
-    3\u30AD\u30FC:\u7E26\u56DE\u8EE2(\u53F3\u5074)\n4\u30AD\u30FC:\u6A2A\u56DE\u8EE2(\u4E0B\u5074)\n
-    5\u30AD\u30FC:\u6A2A\u56DE\u8EE2(\u771F\u3093\u4E2D)\n6\u30AD\u30FC:Z\u8EF8\u56DE\u8EE2(\u624B\u524D\u5074)\n
-    7\u30AD\u30FC:Z\u8EF8\u56DE\u8EE2(\u771F\u3093\u4E2D)\n8\u30AD\u30FC:Z\u8EF8\u56DE\u8EE2(\u5965\u5074)\n
-    0\u30AD\u30FC:\u65B9\u5411\u3092\u9006\u56DE\u8EE2\u306B\u3059\u308B"
+  m_Text: "        Cube\u306E\u56DE\u8EE2\u65B9\u6CD5\n\n 1\u30AD\u30FC:\u7E26\u56DE\u8EE2(\u5DE6\u5074)\n2\u30AD\u30FC:\u7E26\u56DE\u8EE2(\u771F\u3093\u4E2D)\n3\u30AD\u30FC:\u7E26\u56DE\u8EE2(\u53F3\u5074)\n4\u30AD\u30FC:\u6A2A\u56DE\u8EE2(\u4E0B\u5074)\n5\u30AD\u30FC:\u6A2A\u56DE\u8EE2(\u771F\u3093\u4E2D)\n6\u30AD\u30FC:Z\u8EF8\u56DE\u8EE2(\u624B\u524D\u5074)\n7\u30AD\u30FC:Z\u8EF8\u56DE\u8EE2(\u771F\u3093\u4E2D)\n8\u30AD\u30FC:Z\u8EF8\u56DE\u8EE2(\u5965\u5074)\n0\u30AD\u30FC:\u65B9\u5411\u3092\u9006\u56DE\u8EE2\u306B\u3059\u308B"
 --- !u!222 &412164179
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2257,13 +2254,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.20906459, y: 0.25268406, z: -0.0560187, w: 0.9430295}
-  m_LocalPosition: {x: -1.8, y: 4, z: -3}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 4, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 25, y: 30, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0

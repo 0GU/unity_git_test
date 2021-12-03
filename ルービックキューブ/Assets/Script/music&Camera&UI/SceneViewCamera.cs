@@ -17,6 +17,9 @@ public class SceneViewCamera : MonoBehaviour
 
     private Vector3 preMousePos;
 
+    [SerializeField]
+    private Vector3 Reset_pos=new Vector3(1f,1f,1f);
+
     private void Update()
     {
         MouseUpdate();
@@ -35,6 +38,12 @@ public class SceneViewCamera : MonoBehaviour
             preMousePos = Input.mousePosition;
 
         MouseDrag(Input.mousePosition);
+
+        if(Input.GetKeyDown(KeyCode.R)==true)
+        {
+            transform.position = Reset_pos;
+            transform.rotation = Quaternion.identity;
+        }
     }
 
     private void MouseWheel(float delta)
