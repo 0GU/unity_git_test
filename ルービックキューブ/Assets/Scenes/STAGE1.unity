@@ -710,6 +710,7 @@ MonoBehaviour:
   wheelSpeed: 5
   moveSpeed: 0.5
   rotateSpeed: 0.5
+  Reset_pos: {x: 1, y: 3, z: -4}
 --- !u!81 &202021477
 AudioListener:
   m_ObjectHideFlags: 0
