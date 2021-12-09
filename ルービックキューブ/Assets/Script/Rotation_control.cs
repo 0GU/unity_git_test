@@ -45,7 +45,7 @@ public class Rotation_control : MonoBehaviour
         Vector3 CharaPos = GameObject.Find("unitychan").transform.position;
 
         //âEâÒì]
-        if (Input.GetKeyDown(KeyCode.Alpha1) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false && CharaPos.x > 0.745f)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && Input.GetKey(KeyCode.Alpha9) && flag_check(cubeflag) == false && CharaPos.x > 0.745f)
         {
             flag = true;
 
@@ -72,7 +72,7 @@ public class Rotation_control : MonoBehaviour
         }
 
         //ç∂âÒì]
-        if (Input.GetKeyDown(KeyCode.Alpha1) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false && CharaPos.x > 0.745f)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && !(Input.GetKey(KeyCode.Alpha9)) && flag_check(cubeflag) == false && CharaPos.x > 0.745f)
         {
             flag = true;
 
@@ -98,7 +98,7 @@ public class Rotation_control : MonoBehaviour
             c_num = 0;
         }
         //âEâÒì]
-        if (Input.GetKeyDown(KeyCode.Alpha2) && (Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false && (CharaPos.x < 0.25f || CharaPos.x > 1.745f))
+        if (Input.GetKeyDown(KeyCode.Alpha2) && (Input.GetKey(KeyCode.Alpha9)) && flag_check(cubeflag) == false && (CharaPos.x < 0.25f || CharaPos.x > 1.745f))
         {
             flag = true;
 
@@ -124,7 +124,7 @@ public class Rotation_control : MonoBehaviour
         }
 
         //ç∂âÒì]
-        if (Input.GetKeyDown(KeyCode.Alpha2) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false && (CharaPos.x < 0.25f || CharaPos.x > 1.745f))
+        if (Input.GetKeyDown(KeyCode.Alpha2) && !(Input.GetKey(KeyCode.Alpha9)) && flag_check(cubeflag) == false && (CharaPos.x < 0.25f || CharaPos.x > 1.745f))
         {
             flag = true;
 
@@ -151,7 +151,7 @@ public class Rotation_control : MonoBehaviour
 
 
         //âEâÒì]
-        if (Input.GetKeyDown(KeyCode.Alpha3) && (Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false && CharaPos.x < 1.25f)
+        if (Input.GetKeyDown(KeyCode.Alpha3) && (Input.GetKey(KeyCode.Alpha9)) && flag_check(cubeflag) == false && CharaPos.x < 1.25f)
         {
             flag = true;
 
@@ -178,7 +178,7 @@ public class Rotation_control : MonoBehaviour
 
 
         //ç∂âÒì]
-        if (Input.GetKeyDown(KeyCode.Alpha3) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false && CharaPos.x < 1.25f)
+        if (Input.GetKeyDown(KeyCode.Alpha3) && !(Input.GetKey(KeyCode.Alpha9)) && flag_check(cubeflag) == false && CharaPos.x < 1.25f)
         {
             flag = true;
 
@@ -204,7 +204,7 @@ public class Rotation_control : MonoBehaviour
         }
 
         //âEâÒì]
-        if (Input.GetKeyDown(KeyCode.Alpha4) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false)
+        if (Input.GetKeyDown(KeyCode.Alpha4) && !(Input.GetKey(KeyCode.Alpha9)) && flag_check(cubeflag) == false)
         {
             flag = true;
 
@@ -228,7 +228,7 @@ public class Rotation_control : MonoBehaviour
             c_num = 0;
         }
         //ç∂âÒì]
-        if (Input.GetKeyDown(KeyCode.Alpha4) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false)
+        if (Input.GetKeyDown(KeyCode.Alpha4) && Input.GetKey(KeyCode.Alpha9) && flag_check(cubeflag) == false)
         {
             flag = true;
 
@@ -253,7 +253,7 @@ public class Rotation_control : MonoBehaviour
         }
 
         //âEâÒì]
-        if (Input.GetKeyDown(KeyCode.Alpha5) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false)
+        if (Input.GetKeyDown(KeyCode.Alpha5) && !(Input.GetKey(KeyCode.Alpha9)) && flag_check(cubeflag) == false)
         {
             flag = true;
 
@@ -277,7 +277,7 @@ public class Rotation_control : MonoBehaviour
             c_num = 0;
         }
         //ç∂âÒì]
-        if (Input.GetKeyDown(KeyCode.Alpha5) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false)
+        if (Input.GetKeyDown(KeyCode.Alpha5) && Input.GetKey(KeyCode.Alpha9) && flag_check(cubeflag) == false)
         {
             flag = true;
 
@@ -304,7 +304,7 @@ public class Rotation_control : MonoBehaviour
 
 
         //ç∂âÒì]
-        if (Input.GetKeyDown(KeyCode.Alpha6) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false && CharaPos.z > 1.25f)
+        if (Input.GetKeyDown(KeyCode.Alpha6) && !(Input.GetKey(KeyCode.Alpha9)) && flag_check(cubeflag) == false && CharaPos.z > 1.25f)
         {
             flag = true;
 
@@ -332,7 +332,7 @@ public class Rotation_control : MonoBehaviour
         }
 
         //âEâÒì]
-        if (Input.GetKeyDown(KeyCode.Alpha6) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false && CharaPos.z > 1.25f)
+        if (Input.GetKeyDown(KeyCode.Alpha6) && Input.GetKey(KeyCode.Alpha9) && flag_check(cubeflag) == false && CharaPos.z > 1.25f)
         {
             flag = true;
 
@@ -359,7 +359,7 @@ public class Rotation_control : MonoBehaviour
         }
 
         //ç∂âÒì]
-        if (Input.GetKeyDown(KeyCode.Alpha7) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false && (CharaPos.z < 0.4f || CharaPos.z > 1.99f))
+        if (Input.GetKeyDown(KeyCode.Alpha7) && !(Input.GetKey(KeyCode.Alpha9)) && flag_check(cubeflag) == false && (CharaPos.z < 0.4f || CharaPos.z > 1.99f))
         {
             flag = true;
 
@@ -389,7 +389,7 @@ public class Rotation_control : MonoBehaviour
         }
 
         //âEâÒì]
-        if (Input.GetKeyDown(KeyCode.Alpha7) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false && (CharaPos.z < 0.4f || CharaPos.z > 1.99f))
+        if (Input.GetKeyDown(KeyCode.Alpha7) && Input.GetKey(KeyCode.Alpha9) && flag_check(cubeflag) == false && (CharaPos.z < 0.4f || CharaPos.z > 1.99f))
         {
             flag = true;
 
@@ -415,7 +415,7 @@ public class Rotation_control : MonoBehaviour
         }
 
         //ç∂âÒì]
-        if (Input.GetKeyDown(KeyCode.Alpha8) && !(Input.GetKey(KeyCode.Alpha0)) && flag_check(cubeflag) == false && CharaPos.z < 1.45f)
+        if (Input.GetKeyDown(KeyCode.Alpha8) && !(Input.GetKey(KeyCode.Alpha9)) && flag_check(cubeflag) == false && CharaPos.z < 1.45f)
         {
             flag = true;
 
@@ -444,7 +444,7 @@ public class Rotation_control : MonoBehaviour
         }
 
         //âEâÒì]
-        if (Input.GetKeyDown(KeyCode.Alpha8) && Input.GetKey(KeyCode.Alpha0) && flag_check(cubeflag) == false && CharaPos.z < 1.45f)
+        if (Input.GetKeyDown(KeyCode.Alpha8) && Input.GetKey(KeyCode.Alpha9) && flag_check(cubeflag) == false && CharaPos.z < 1.45f)
         {
             flag = true;
 
