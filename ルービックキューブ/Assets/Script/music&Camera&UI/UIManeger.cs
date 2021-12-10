@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class UIManeger : MonoBehaviour
 {
-    private float time = 1000.0f;
+    private float time = 180.0f;
     public Text timerText;
 
-    //3‚Â‚ÌPanel‚ğŠi”[‚·‚é•Ï”
+    //4‚Â‚ÌPanel‚ğŠi”[‚·‚é•Ï”
     [SerializeField] GameObject gamePanel;
     [SerializeField] GameObject helpPanel;
     [SerializeField] GameObject gameoverPanel;
