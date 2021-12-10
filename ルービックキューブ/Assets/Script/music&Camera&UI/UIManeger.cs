@@ -13,6 +13,8 @@ public class UIManeger : MonoBehaviour
     [SerializeField] GameObject helpPanel;
     [SerializeField] GameObject gameoverPanel;
     [SerializeField] GameObject creditPanel;
+    [SerializeField] GameObject SelectPanel1;
+    [SerializeField] GameObject SelectPanel2;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,7 @@ public class UIManeger : MonoBehaviour
         helpPanel.SetActive(false);
         gameoverPanel.SetActive(false);
         creditPanel.SetActive(false);
+        SelectPanel2.SetActive(false);
     }
 
     void Update()
@@ -59,5 +62,17 @@ public class UIManeger : MonoBehaviour
     {
         creditPanel.SetActive(false);
         gamePanel.SetActive(true);
+    }
+
+    public void Rbutton1Description()
+    {
+        SelectPanel1.SetActive(false);
+        SelectPanel2.SetActive(true);
+    }
+
+    public void Lbutton1Description()
+    {
+        SelectPanel2.SetActive(false);
+        SelectPanel1.SetActive(true);
     }
 }
