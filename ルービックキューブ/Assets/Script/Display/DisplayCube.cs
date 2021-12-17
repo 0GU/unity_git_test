@@ -40,7 +40,7 @@ public class DisplayCube : MonoBehaviour
 
     void Start()
     {
-        for (int load = 0; load < 4; load++)
+        for (int load = 0; load < 2; load++)
         {
 
             switch(load)
@@ -75,7 +75,7 @@ public class DisplayCube : MonoBehaviour
                     ChangeGenerate(load);
                     break;
                 case 1:
-                    csvFile = Resources.Load("STAGE2") as TextAsset; // Resouces下のCSV読み込み
+                    csvFile = Resources.Load("STAGE3") as TextAsset; // Resouces下のCSV読み込み
                     StringReader reader1 = new StringReader(csvFile.text);
 
                     // , で分割しつつ一行ずつ読み込み

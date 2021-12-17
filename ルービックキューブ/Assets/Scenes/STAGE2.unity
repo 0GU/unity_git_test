@@ -1986,7 +1986,7 @@ GameObject:
   - component: {fileID: 683928323}
   m_Layer: 0
   m_Name: UIManeger
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2004,12 +2004,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 273565905}
+  stop_flag: 0
   gamePanel: {fileID: 226478498}
   helpPanel: {fileID: 894263839}
   gameoverPanel: {fileID: 2091783190}
   creditPanel: {fileID: 1915235031}
-  SelectPanel1: {fileID: 1190474199}
-  SelectPanel2: {fileID: 184100886}
 --- !u!4 &683928324
 Transform:
   m_ObjectHideFlags: 0
@@ -2524,6 +2523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chara: {fileID: 4327981963644927273, guid: cd5375f4029b9a045827669ec6dd4aa9, type: 3}
   gameclea: {fileID: 406134619}
+  uiObject: {fileID: 0}
 --- !u!114 &917217106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2573,8 +2573,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b11ad59976785d547b85566e41263609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chara: {fileID: 0}
-  gameclea: {fileID: 0}
+  chara: {fileID: 4327981963644927273, guid: cd5375f4029b9a045827669ec6dd4aa9, type: 3}
+  gameclea: {fileID: 406134619}
+  uiObject: {fileID: 0}
 --- !u!1 &1079996938
 GameObject:
   m_ObjectHideFlags: 0

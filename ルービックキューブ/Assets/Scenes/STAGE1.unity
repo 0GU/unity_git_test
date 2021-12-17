@@ -1075,7 +1075,7 @@ GameObject:
   - component: {fileID: 334778111}
   m_Layer: 0
   m_Name: UIManeger
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1093,12 +1093,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1824404896}
+  stop_flag: 0
   gamePanel: {fileID: 1956248444}
   helpPanel: {fileID: 1825358739}
   gameoverPanel: {fileID: 1088625687}
   creditPanel: {fileID: 653876377}
-  SelectPanel1: {fileID: 881559731}
-  SelectPanel2: {fileID: 1046016094}
 --- !u!4 &334778112
 Transform:
   m_ObjectHideFlags: 0
@@ -3418,6 +3417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chara: {fileID: 4327981963644927273, guid: cd5375f4029b9a045827669ec6dd4aa9, type: 3}
   gameclea: {fileID: 152939086}
+  uiObject: {fileID: 334778110}
 --- !u!1 &1234429115
 GameObject:
   m_ObjectHideFlags: 0
