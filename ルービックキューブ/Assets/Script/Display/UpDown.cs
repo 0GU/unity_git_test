@@ -8,13 +8,9 @@ public class UpDown : MonoBehaviour
     float pos;
     [SerializeField] Vector3 pos_set;
     bool flag = false;
-
-
     void Start()
     {
        
-       
-     
     }
 
     // Update is called once per frame

@@ -24,13 +24,14 @@ public class UIManeger : MonoBehaviour
         creditPanel.SetActive(false);
         SelectPanel2.SetActive(false);
     }
-
+    
     void Update()
     {
         if (0 < time)
         {
+            timerText.text = string.Format("{0:00.00}", time);
             time -= Time.deltaTime;
-           timerText.text = time.ToString("F1");
+          
         }
         else if (time < 0)
         {

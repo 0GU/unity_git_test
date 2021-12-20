@@ -32,6 +32,7 @@ public class DisplayRotate : MonoBehaviour
             degree_rotationYR(new Vector3(0, 1, 0));
             flag = true;
         }
+        degree_rotationYR(new Vector3(0, 1, 0));
     }
 
     public async void degree_rotationYR(Vector3 A)
@@ -52,7 +53,7 @@ public class DisplayRotate : MonoBehaviour
             
 
 
-        degree_rotationYR(A);
+     //   degree_rotationYR(A);
 
     }
 }

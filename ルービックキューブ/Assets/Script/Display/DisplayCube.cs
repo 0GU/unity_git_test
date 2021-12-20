@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 public class DisplayCube : MonoBehaviour
 {
 
-    GameObject[] tag1_Objects; //代入用のゲームオブジェクト配列を用意
+    GameObject[] STAGE1_Objects; //代入用のゲームオブジェクト配列を用意
+    GameObject[] STAGE2_Objects; //代入用のゲームオブジェクト配列を用意
+    GameObject[] STAGE3_Objects; //代入用のゲームオブジェクト配列を用意
+    GameObject[] STAGE4_Objects; //代入用のゲームオブジェクト配列を用意
 
-    TextAsset csvFile; // CSVファイル
+    TextAsset csvFile1; // CSVファイル
+    TextAsset csvFile2; // CSVファイル
+    TextAsset csvFile3; // CSVファイル
+    TextAsset csvFile4; // CSVファイル
     public int height; // CSVの行数
     List<string[]> csvDatas1= new List<string[]>(); // CSVの中身を入れるリスト;
     List<string[]> csvDatas2 = new List<string[]>(); // CSVの中身を入れるリスト;
@@ -46,8 +52,8 @@ public class DisplayCube : MonoBehaviour
             switch(load)
             {
                 case 0:
-                    csvFile = Resources.Load("STAGE1") as TextAsset; // Resouces下のCSV読み込み
-                    StringReader reader = new StringReader(csvFile.text);
+                    csvFile1 = Resources.Load("STAGE1") as TextAsset; // Resouces下のCSV読み込み
+                    StringReader reader = new StringReader(csvFile1.text);
 
                     // , で分割しつつ一行ずつ読み込み
                     // リストに追加していく
@@ -71,12 +77,12 @@ public class DisplayCube : MonoBehaviour
                         g++;
                     }
 
-                    tag1_Objects = GameObject.FindGameObjectsWithTag("STAGE1");
+                    STAGE1_Objects = GameObject.FindGameObjectsWithTag("STAGE1");
                     ChangeGenerate(load);
                     break;
                 case 1:
-                    csvFile = Resources.Load("STAGE2") as TextAsset; // Resouces下のCSV読み込み
-                    StringReader reader1 = new StringReader(csvFile.text);
+                    csvFile2 = Resources.Load("STAGE2") as TextAsset; // Resouces下のCSV読み込み
+                    StringReader reader1 = new StringReader(csvFile2.text);
 
                     // , で分割しつつ一行ずつ読み込み
                     // リストに追加していく
@@ -100,12 +106,12 @@ public class DisplayCube : MonoBehaviour
                         g++;
                     }
 
-                    tag1_Objects = GameObject.FindGameObjectsWithTag("STAGE2");
+                    STAGE2_Objects = GameObject.FindGameObjectsWithTag("STAGE2");
                     ChangeGenerate(load);
                     break;
                 case 2:
-                    csvFile = Resources.Load("STAGE3") as TextAsset; // Resouces下のCSV読み込み
-                    StringReader reader2 = new StringReader(csvFile.text);
+                    csvFile3 = Resources.Load("STAGE3") as TextAsset; // Resouces下のCSV読み込み
+                    StringReader reader2 = new StringReader(csvFile3.text);
                     // , で分割しつつ一行ずつ読み込み
                     // リストに追加していく
                     while (reader2.Peek() > -1) // reader.Peaekが0になるまで繰り返す
@@ -128,12 +134,12 @@ public class DisplayCube : MonoBehaviour
                         g++;
                     }
 
-                    tag1_Objects = GameObject.FindGameObjectsWithTag("STAGE3");
+                    STAGE3_Objects = GameObject.FindGameObjectsWithTag("STAGE3");
                     ChangeGenerate(load);
                     break;
                 case 3:
-                    csvFile = Resources.Load("STAGE4") as TextAsset; // Resouces下のCSV読み込み
-                    StringReader reader3 = new StringReader(csvFile.text);
+                    csvFile4 = Resources.Load("STAGE4") as TextAsset; // Resouces下のCSV読み込み
+                    StringReader reader3 = new StringReader(csvFile4.text);
 
                     // , で分割しつつ一行ずつ読み込み
                     // リストに追加していく
@@ -157,7 +163,7 @@ public class DisplayCube : MonoBehaviour
                         g++;
                     }
 
-                    tag1_Objects = GameObject.FindGameObjectsWithTag("STAGE4");
+                    STAGE4_Objects = GameObject.FindGameObjectsWithTag("STAGE4");
                     ChangeGenerate(load);
                     break;
             }
@@ -184,8 +190,26 @@ public class DisplayCube : MonoBehaviour
         {
             for (int j = 0; j < 9; j++)//横
             {
-                Cube_pos = tag1_Objects[(i * 9) + j].transform.position;
-                Change_Cube = tag1_Objects[(i * 9) + j];
+                switch (stage)
+                {
+                    case 0:
+                        Cube_pos = STAGE1_Objects[(i * 9) + j].transform.position;
+                        Change_Cube = STAGE1_Objects[(i * 9) + j];
+                        break;
+                    case 1:
+                        Cube_pos = STAGE2_Objects[(i * 9) + j].transform.position;
+                        Change_Cube = STAGE2_Objects[(i * 9) + j];
+                        break;
+                    case 2:
+                        Cube_pos = STAGE3_Objects[(i * 9) + j].transform.position;
+                        Change_Cube = STAGE3_Objects[(i * 9) + j];
+                        break;
+                    case 3:
+                        Cube_pos = STAGE4_Objects[(i * 9) + j].transform.position;
+                        Change_Cube = STAGE4_Objects[(i * 9) + j];
+                        break;
+                }
+
                 switch (Cube_pos.x)
                 {
                     case 0:
