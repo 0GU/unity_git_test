@@ -233,8 +233,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b11ad59976785d547b85566e41263609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chara: {fileID: 0}
-  gameclea: {fileID: 0}
+  chara: {fileID: 4327981963644927273, guid: cd5375f4029b9a045827669ec6dd4aa9, type: 3}
+  gameclea: {fileID: 1766390143}
   uiObject: {fileID: 0}
 --- !u!114 &2847087
 MonoBehaviour:
