@@ -16,6 +16,8 @@ public class Game : MonoBehaviour
 
     private void OnCollisionStay(Collision other)
     {
+
+
         //もしゴールオブジェクトのコライダーに接触した時の処理。
         if (other.gameObject.tag == "Red Panel")
         {
