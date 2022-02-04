@@ -639,13 +639,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e0ea4aa9713ae146b1b915cbf9e14fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 3.4028235e+38
   timerText: {fileID: 862346162}
+  stop_flag: 0
   gamePanel: {fileID: 1170665375}
   helpPanel: {fileID: 574722868}
   gameoverPanel: {fileID: 137460472}
   creditPanel: {fileID: 925915405}
-  SelectPanel1: {fileID: 1668895486}
-  SelectPanel2: {fileID: 880763005}
 --- !u!4 &142784368
 Transform:
   m_ObjectHideFlags: 0

@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class UIManeger : MonoBehaviour
 {
-    private float time = 180.0f;
+    [SerializeField]
+    private float time = 60.0f;
     public Text timerText;
 
     public bool stop_flag = false;
